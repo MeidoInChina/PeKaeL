@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* navbar specific */
@@ -40,3 +39,21 @@ nav ul li a{
     text-decoration: none;
 }
 
+/* Explore */
+.explore{
+    width: 100%;
+    height: 100vh;
+}
+
+.explore .slide{
+    
+} 
+
+.explore .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
