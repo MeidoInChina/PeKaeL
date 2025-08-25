@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -11,7 +14,7 @@
     <nav>
         <div class="logo">
             <img src="img/logoKK2.png">
-            <h3>Desa Wisata Kakaskasen Dua</h3>
+            <span>Desa Wisata Kakaskasen Dua</span>
         </div>
         <ul class="nav-links">
             <li><a href="#">Beranda</a></li>
@@ -23,19 +26,28 @@
     </nav>
     <!-- explore more -->
     <div class="explore">
-        <div class="slide">
-            <img src="img/scene1.png">
-            <img src="img/scene2.png">
-            <img src="img/scene3.png">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('img/scene1.png')"></div>
+            <div class="slide" style="background-image: url('img/scene2.png')"></div>
+            <div class="slide" style="background-image: url('img/scene3.png')"></div>
         </div>
         <div class="text">
-            <h3>Selamat datang di desa wisata</h3>
+            <p>Selamat datang di Desa Wisata</p>
             <h1>Kakaskasen Dua</h1>
-            <a href="#"><button>Explore More</button></a>
+            <a href="#" class="explore-btn">Explore More</a>
+        </div>
+        <div class="slider-nav">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
     </div>
-    <!-- nav 2? -->
-
+    <div class="menu-nav">
+        <a href="#struktur">Struktur desa</a>
+        <a href="#homestay">Homestay</a>
+        <a href="#paket-wisata">Paket Wisata</a>
+        <a href="#lokasi">Lokasi</a>
+    </div>
     <!-- tentang desa -->
 
     <!-- location -->
@@ -47,6 +59,6 @@
     <!-- struktur pemerintahan -->
 
     <!-- footer -->
-
+    <script src="script.js"></script>
 </body>
 </html>

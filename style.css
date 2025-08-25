@@ -2,61 +2,193 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.oleo-script-regular {
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oleo-script-bold {
+  font-family: "Oleo Script", system-ui;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* navbar specific */
-nav{
+nav {
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 100px;
-    background: linear-gradient(#000000 50%, #00000000);
+    padding: 20px 50px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-index: 1000;
 }
 
-nav .logo{
-    width: 360px;
+nav .logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
+}
+
+nav .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+nav .logo span {
     color: white;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
-nav img{
-    width: 70px;
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
-nav ul li{
+.nav-links li {
     list-style: none;
-    display: inline-block;
-    margin: 0 20px;
 }
 
-nav ul li a{
+.nav-links li a {
     color: white;
-    font-size: 15px;
-    font-weight: 200;
-    transition: all 0.3s ease;
     text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    transition: 0.3s;
 }
 
-/* Explore */
-.explore{
-    width: 100%;
-    height: 100vh;
+.nav-links li a:hover {
+    opacity: 0.8;
 }
 
-.explore .slide{
-    width: 100%;
-    height: 100vh;
+/* Explore Section */
+.explore {
     position: relative;
+    height: 100vh;
     overflow: hidden;
-} 
+}
 
-.explore .text{
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
+    color: white;
+    width: 100%;
+    z-index: 2;
+}
+
+.text p {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.text h1 {
+    font-size: 5em;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #B22222;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    margin-top: 20px;
+    border: 2px solid #B22222;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: transparent;
+    border-color: white;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 8px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.dot.active {
+    opacity: 1;
+    background: white;
+}
+
+/* Menu Navigation */
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background: #B22222;
+    gap: 100px;
+}
+
+.menu-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+.menu-nav a:hover {
+    opacity: 0.8;
+}
+
+/* Tambahkan overlay pada slide */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
 }
