@@ -64,7 +64,7 @@ nav .logo span {
 }
 
 .nav-links li a:hover {
-    opacity: 0.8;
+    color: #B22222;
 }
 
 /* Explore Section */
@@ -167,7 +167,7 @@ nav .logo span {
 
 /* Menu Navigation */
 .menu-nav {
-    width: 90%;
+    width: 75%;
     margin: 15px auto;
     display: flex;
     border-radius: 30px;
@@ -175,7 +175,7 @@ nav .logo span {
     padding: 30px 1px;
     background: #B22222;
     gap: 100px;
-    
+    box-shadow: 10px 10px 3px rgba(100, 31, 31, 0.715)
 }
 
 .menu-nav a {
@@ -232,15 +232,44 @@ nav .logo span {
     padding: 80px 100px;
 }
 
-.about .content {
+.t-img{
+    width: 50%;
+    height: auto;
     display: flex;
-    gap: 50px;
-    margin-top: 30px;
+    flex-direction: column;
 }
 
-.about img {
-    width: 50%;
+.t-top, .t-down{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.t-top img{
+    width: 100%;
     border-radius: 10px;
+    height: 250px;
+    border: white 4px solid;
+}
+
+.t-down img{
+    width: 48%;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+    border: white 4px solid;
+}
+
+.t-text{
+    width: 50%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: white;
 }
 
 /* Location */
@@ -267,23 +296,20 @@ nav .logo span {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-
-.container p, .container h2 {
     color: white;
 }
 
 /* Lodging */
 .lodging {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 80px 100px;
 }
 
-.lodging-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
+
 
 /* Packages */
 .packages {
