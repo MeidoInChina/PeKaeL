@@ -264,10 +264,11 @@ nav .logo span {
 
 .t-text{
     width: 50%;
+    height: 100%;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 20px;
     color: white;
 }
@@ -280,6 +281,8 @@ nav .logo span {
 
 .container {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     gap: 50px;
     background-color: #511717;
@@ -293,10 +296,16 @@ nav .logo span {
 
 .loc-text {
     width: 40%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     color: white;
+}
+
+.loc-text h2{
+    font-size: 1.6em;
+    margin-bottom: 20px;
 }
 
 /* Lodging */
@@ -309,9 +318,11 @@ nav .logo span {
 }
 
 .log-card{
-    width: 350px;
+    width: 450px;
     background: black;
     color: white;
+    border: #fff 10px solid;
+    border-radius: 25px;
 }
 
 .log-card img{
@@ -319,8 +330,41 @@ nav .logo span {
     height: auto;
 }
 
+.log-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
 .log-info{
-    padding: 20px;
+    padding: 40px;
+}
+
+.log-info span{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.log-info span div{
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+}
+
+.log-info span h4{
+    color: #B22222;
+}
+
+.log-card ul{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .log-card ul li{
