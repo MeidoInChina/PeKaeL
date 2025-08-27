@@ -330,11 +330,27 @@ nav .logo span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     padding: 80px 100px;
 }
 
+.log-card{
+    width: 350px;
+    background: black;
+    color: white;
+}
 
+.log-card img{
+    width: 100%;
+    height: auto;
+}
+
+.log-info{
+    padding: 20px;
+}
+
+.log-card ul li{
+    list-style: none;
+}
 
 /* Packages */
 .packages {
