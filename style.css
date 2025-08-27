@@ -409,29 +409,7 @@ nav .logo span {
     margin-top: 30px;
 }
 
-/* Government Structure */
-.government {
-    padding: 80px 100px;
-}
-
 /* Footer */
-/* footer {
-    background: #333;
-    color: white;
-    padding: 50px 100px 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-} */
  footer {
   background: #000;
   color: #fff;
