@@ -25,28 +25,6 @@ html{
     width: 0;
 }
 
-.floating{
-    box-shadow: 10px 10px 10px #6d464670;
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-.floating-2{
-    box-shadow: 10px 10px 10px #6d464670;
-    animation-name: floating;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 10px); }
-    100%   { transform: translate(0, -0px); }    
-}
-
 /* navbar specific */
 nav {
     position: fixed;
@@ -55,7 +33,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 20px 50px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
     z-index: 1000;
 }
 
@@ -339,52 +317,27 @@ h2 {
     flex-direction: column;
 }
 
-.t-top{
+.t-top, .t-down{
     width: 100%;
-    position: relative;
-    height: 0;
-    padding-bottom: 50%;
-    overflow: hidden;
-}
-
-.t-top img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    border: white 4px solid;
-}
-
-.t-down{
-    width: 100%;
-    position: relative;
-    height: 0;
-    padding-bottom: 50%;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 }
 
-.t-down img{
-    position: absolute;
-    top: 30px;
-    width: 48%;
-    height: 90%;
+.t-top img{
+    width: 100%;
     border-radius: 10px;
-    object-fit: cover;
+    height: 250px;
     border: white 4px solid;
 }
 
-.d-1{
-    left: 0;
-}
-
-.d-2{
-    left: 50%;
+.t-down img{
+    width: 48%;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+    border: white 4px solid;
 }
 
 .t-text{
@@ -396,18 +349,6 @@ h2 {
     justify-content: space-evenly;
     gap: 20px;
     color: white;
-}
-
-.t-text h1{
-    text-align: center;
-    font-size: 4em;
-    margin-bottom: 20px;
-}
-
-.t-text p{
-    font-size: 1.2em;
-    line-height: 1.3em;
-    text-align: justify;
 }
 
 /* Location */
@@ -440,14 +381,8 @@ h2 {
 }
 
 .loc-text h2{
-    font-size: 1.8em;
-    margin-bottom: 30px;
-}
-
-.loc-text p{
-    font-size: 1.2em;
-    line-height: 1.3em;
-    text-align: justify;
+    font-size: 1.6em;
+    margin-bottom: 20px;
 }
 
 /* Lodging */
@@ -521,13 +456,76 @@ h2 {
 /* Packages */
 .packages {
     padding: 80px 100px;
+    text-align: center;
+    color: white;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .package-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 300px); /* Fixed width */
+    grid-template-rows: repeat(2, 450px); /* Fixed height */
     gap: 30px;
-    margin-top: 30px;
+    justify-content: center;
+}
+
+.package-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.package-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.package-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+    transform: scale(1.02);
+}
+
+.package-card:hover .package-info {
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    .packages {
+        padding: 40px;
+    }
+    
+    .package-cards {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 450px);
+    }
+}
+
+@media (max-width: 768px) {
+    .packages {
+        padding: 20px;
+    }
+    
+    .package-cards {
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(6, 450px);
+    }
 }
 
 /* Footer */
@@ -662,6 +660,12 @@ h2 {
 .wrapper .instagram:hover .tooltip::before {
   background: #e4405f;
   color: #fff;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .footer-bottom {
