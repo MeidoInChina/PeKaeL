@@ -89,7 +89,7 @@
         <div class="container floating">
             <div class="log-card">
                 <div class="log-img">
-                    <img src="img/RobloxScreenShot20220105_205841575.png">
+                    <img src="img/inap1.png">
                 </div>
                 <div class="log-info">
                     <h2>Chrisma Bed and Breakfast</h2>
@@ -109,7 +109,7 @@
             </div>
             <div class="log-card">
                 <div class="log-img">
-                    <img src="img/RobloxScreenShot20220305_123235886.png">
+                    <img src="img/inap2.png">
                 </div>
                 <div class="log-info">
                     <h2>Alina's Homestay</h2>
@@ -134,50 +134,78 @@
         <h2>Paket Wisata</h2>
         <h3>Pilih paket wisata sesuai dengan kebutuhan Anda</h3>
         <div class="package-cards">
-            <div class="package-card">
+            <div class="package-card" data-title="Paket Wisata Alam" data-desc="Ini penjelasan" data-img="img/poster1.jpg">
                 <img src="img/poster1.jpg" alt="Paket 1">
                 <div class="package-info">
-                    <h3>Paket 1</h3>
-                    <p>info</p>
+                    <h3>Paket Wisata Alam</h3>
+                    <p>Nikmati keindahan alam pegunungan dengan hiking dan camping.</p>
                 </div>
             </div>
-            <div class="package-card">
+            <div class="package-card" data-title="Paket Agrowisata" data-desc="Ini penjelasan" data-img="img/poster2.jpg">
                 <img src="img/poster2.jpg" alt="Paket 2">
                 <div class="package-info">
-                    <h3>Paket 2</h3>
-                    <p>info</p>
+                    <h3>Paket Agrowisata</h3>
+                    <p>Eksplorasi perkebunan dan pertanian khas Kakaskasen Dua.</p>
                 </div>
             </div>
-            <div class="package-card">
+            <div class="package-card" data-title="Paket Kuliner" data-desc="Ini penjelasan" data-img="img/poster3.jpg">
                 <img src="img/poster3.jpg" alt="Paket 3">
                 <div class="package-info">
-                    <h3>Paket 3</h3>
-                    <p>info</p>
+                    <h3>Paket Kuliner</h3>
+                    <p>Rasakan kelezatan makanan tradisional Minahasa.</p>
                 </div>
             </div>
-            <div class="package-card">
+            <div class="package-card" data-title="Paket Budaya" data-desc="Ini penjelasan" data-img="img/poster4.jpg">
                 <img src="img/poster4.jpg" alt="Paket 4">
                 <div class="package-info">
-                    <h3>Paket 4</h3>
-                    <p>info</p>
+                    <h3>Paket Budaya</h3>
+                    <p>Pelajari kebudayaan dan tradisi masyarakat lokal.</p>
                 </div>
             </div>
-            <div class="package-card">
+            <div class="package-card" data-title="Paket Fotografi" data-desc="Ini penjelasan" data-img="img/poster5.jpg">
                 <img src="img/poster5.jpg" alt="Paket 5">
                 <div class="package-info">
-                    <h3>Paket 5</h3>
-                    <p>info</p>
+                    <h3>Paket Fotografi</h3>
+                    <p>Abadikan momen indah di spot-spot instagramable.</p>
                 </div>
             </div>
-            <div class="package-card">
+            <div class="package-card" data-title="Paket Lengkap" data-desc="Ini penjelasan" data-img="img/poster6.jpg">
                 <img src="img/poster6.jpg" alt="Paket 6">
                 <div class="package-info">
-                    <h3>Paket 6</h3>
-                    <p>info</p>
+                    <h3>Paket Lengkap</h3>
+                    <p>Kombinasi semua pengalaman dalam satu paket spesial.</p>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Modal Popup -->
+    <div id="package-modal" class="package-modal">
+        <div class="package-modal-content">
+            <button class="modal-close" aria-label="Tutup">&times;</button>
+            <img id="modal-img" src="" alt="Paket" class="modal-img">
+            <div class="modal-text">
+                <h2 id="modal-title">Paket Wisata Alam</h2>
+                <h4 id="modal-desc">Nikmati keindahan alam pegunungan dengan hiking dan camping.</h4>
+                <p id="modal-detail">
+                    Jelajahi keindahan alam Desa Wisata Kakaskasen Dua dengan berbagai aktivitas outdoor yang seru dan menantang. Cocok untuk keluarga, komunitas, maupun solo traveler yang ingin menikmati udara segar dan panorama pegunungan.
+                </p>
+                <div class="modal-buttons">
+                    <button class="modal-btn modal-order">Pesan Sekarang</button>
+                    <button class="modal-btn modal-cancel">Batalkan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tentang Kami Section -->
+    <section class="about-us-section">
+        <div class="about-us-card">
+            <h2 class="about-us-title">Tentang Kami</h2>
+            <p class="about-us-desc">
+                Website Desa Wisata Kakaskasen 2 merupakan pusat informasi resmi yang dirancang untuk memudahkan wisatawan dalam mengenal dan menjelajahi desa wisata kami. Melalui website ini, Kalian dapat menemukan berbagai pilihan paket wisata, rekomendasi penginapan yang dikelola masyarakat, serta panduan lokasi dan aktivitas menarik yang dapat dinikmati. Kami berkomitmen untuk memberikan informasi yang jelas, terpercaya, dan mudah diakses sehingga setiap pengunjung dapat merencanakan perjalanan dengan nyaman. Lebih dari sekadar media informasi, website ini juga menjadi jembatan yang menghubungkan wisatawan dengan masyarakat Desa Wisata Kakaskasen 2 dalam semangat pariwisata berkelanjutan.
+            </p>
+        </div>
+    </section>
     <!-- footer -->
     <footer>
         <div class="footer-container">
@@ -250,6 +278,55 @@
         </a>
     </footer>
 
+    <script>
+        // JavaScript for modal popup
+        const packageCards = document.querySelectorAll('.package-card');
+        const modal = document.getElementById('package-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalDetail = document.getElementById('modal-detail');
+        const modalOrder = document.querySelector('.modal-order');
+        const modalCancel = document.querySelector('.modal-cancel');
+        const modalClose = document.querySelector('.modal-close');
+
+        // Paket detail (optional, bisa diisi sesuai kebutuhan)
+        const paketDetails = [
+            "Jelajahi keindahan alam Desa Wisata Kakaskasen Dua dengan berbagai aktivitas outdoor yang seru dan menantang. Cocok untuk keluarga, komunitas, maupun solo traveler yang ingin menikmati udara segar dan panorama pegunungan.",
+            "Nikmati pengalaman agrowisata dengan mengunjungi perkebunan dan pertanian lokal, belajar langsung dari petani, dan rasakan hasil bumi segar khas Kakaskasen Dua.",
+            "Wisata kuliner khas Minahasa, cicipi berbagai makanan tradisional yang lezat dan unik, serta pelajari proses pembuatannya bersama warga lokal.",
+            "Kenali budaya dan tradisi masyarakat Kakaskasen Dua melalui pertunjukan seni, kerajinan tangan, dan interaksi langsung dengan komunitas.",
+            "Abadikan momen terbaik di spot-spot foto instagramable, dapatkan tips fotografi dari guide lokal, dan bawa pulang kenangan visual yang tak terlupakan.",
+            "Paket lengkap untuk Anda yang ingin merasakan semua pengalaman wisata di Kakaskasen Dua, mulai dari alam, budaya, kuliner, hingga fotografi."
+        ];
+
+        packageCards.forEach((card, idx) => {
+            card.addEventListener('click', () => {
+                const title = card.getAttribute('data-title');
+                const desc = card.querySelector('.package-info p').textContent;
+                const img = card.getAttribute('data-img');
+                modalTitle.textContent = title;
+                modalDesc.textContent = desc;
+                modalImg.setAttribute('src', img);
+                modalDetail.textContent = paketDetails[idx] || desc;
+                modal.classList.add('active');
+            });
+        });
+
+        modalCancel.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 
 </body>
 </html>
