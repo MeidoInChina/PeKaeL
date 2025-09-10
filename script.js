@@ -60,8 +60,11 @@ modal.addEventListener('click', (e) => {
   if (e.target === modal) modal.classList.remove('active');
 });
 });
+// =====================================================================================================
+// end icon button toggle effect
 
 //halaman baru
+// =====================================================================================================
 const cards = document.querySelectorAll('.card');
 const overlay = document.getElementById('overlay');
 const overlayImg = document.getElementById('overlay-img');
@@ -95,10 +98,12 @@ closeBtn.addEventListener('click', () => overlay.style.display = 'none');
 overlay.addEventListener('click', e => {
   if (e.target === overlay) overlay.style.display = 'none';
 });
-
+// =====================================================================================================
 // end about section
 
+
 // package
+// =====================================================================================================
 class Carousel {
     constructor() {
         this.currentSlide = 0;
@@ -350,4 +355,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
+// =====================================================================================================
+// end package
