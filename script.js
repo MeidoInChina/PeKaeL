@@ -201,7 +201,7 @@ class Carousel {
     }
     
     addCardClickHandlers() {
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.package-card');
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const cardId = card.getAttribute('data-card');
@@ -307,9 +307,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousel = new Carousel();
     
     // Close modal functionality
-    const modal = document.getElementById('#packageModal');
-    const closeModal = document.getElementById('#closeModal');
-    const bookButton = document.getElementById('#bookButton');
+    const modal = document.getElementById('packageModal');
+    const closeModal = document.getElementById('closeModal');
+    const bookButton = document.getElementById('bookButton');
     
     // Add event listeners for social icons
     const whatsappIcon = document.querySelector('.social-icon.whatsapp');
@@ -330,6 +330,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'auto';
     });
     
+    exploreCloseBtn.addEventListener('click', () => {
+        exploreOverlay.style.display = 'none';
+    });
+
     bookButton.addEventListener('click', () => {
         alert('Terima kasih! Anda akan diarahkan ke halaman pemesanan.');
         modal.style.display = 'none';
@@ -340,6 +344,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target === modal) {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
+        }
+        if (event.target === exploreOverlay) {
+            exploreOverlay.style.display = 'none';
         }
     });
 });
