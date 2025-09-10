@@ -63,56 +63,5 @@ modal.addEventListener('click', (e) => {
 // end Icon button toggle effect
 
 // about section
-const cards = document.querySelectorAll('.card');
-const overlay = document.getElementById('overlay');
-const overlayImg = document.getElementById('overlay-img');
-const overlayDesc = document.getElementById('overlay-desc');
-const closeBtn = document.getElementById('closeBtn');
 
-// animasi scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
-
-cards.forEach((card, i) => {
-  observer.observe(card);
-
-  // Klik buka overlay
-  card.addEventListener('click', () => {
-    overlayImg.src = card.dataset.img;
-    overlayDesc.textContent = card.dataset.desc;
-    overlay.style.display = 'flex';
-  });
-});
-
-// Tutup overlay
-closeBtn.addEventListener('click', () => overlay.style.display = 'none');
-overlay.addEventListener('click', e => {
-  if (e.target === overlay) overlay.style.display = 'none';
-});
 // end about section
-
-// Overlay for card preview
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-        const imgSrc = card.getAttribute('data-img');
-        const desc = card.getAttribute('data-desc');
-        document.getElementById('overlay-img').src = imgSrc;
-        document.getElementById('overlay-desc').textContent = desc;
-        document.getElementById('overlay').style.display = 'flex';
-    });
-});
-document.getElementById('closeBtn').onclick = () => {
-    document.getElementById('overlay').style.display = 'none';
-};
-
-// Back to top button
-document.querySelector('.back-to-top').onclick = function(e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
