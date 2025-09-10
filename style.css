@@ -102,13 +102,11 @@ nav .logo span {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background: linear-gradient(#00000080, #0000008f), url(img/dance11.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
-.slider {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -130,38 +128,6 @@ nav .logo span {
 .back-to-top:hover {
   background: #e74c3c;
   transform: scale(1.1);
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    opacity: 0;
-    animation: sliderFade 9s infinite;
-}
-
-.slide.active {
-    opacity: 1;
-    z-index: 2;
-}
-/* Pure CSS Slideshow Animation */
-@keyframes sliderFade {
-    0% { opacity: 1; z-index: 2; }
-    33% { opacity: 1; z-index: 2; }
-    36% { opacity: 0; z-index: 1; }
-    100% { opacity: 0; z-index: 1; }
-}
-
-.slider .slide:nth-child(1) {
-    animation-delay: 0s;
-}
-.slider .slide:nth-child(2) {
-    animation-delay: 3s;
-}
-.slider .slide:nth-child(3) {
-    animation-delay: 6s;
 }
 
 .text {
@@ -220,29 +186,56 @@ h2 {
     transform: scale(0.95);
 }
 
-.slider-nav {
+.exp-img {
     position: absolute;
-    bottom: 40px;
+    bottom: 240px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
     z-index: 2;
+    width: 100vw; /* Reduced width for less space between images */
+    justify-content: center;
 }
 
-.dot {
-    width: 10px;
-    height: 10px;
-    background: rgb(0, 0, 0);
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 8px;
-    cursor: pointer;
+.exp-imgs {
+    width: 250px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
     opacity: 0.5;
-    transition: opacity 0.3s ease;
+    transform: scale(0.8);
+    z-index: 1;
+    transition: 
+        left 0.8s cubic-bezier(.77,0,.18,1),
+        opacity 0.8s cubic-bezier(.77,0,.18,1),
+        transform 0.8s cubic-bezier(.77,0,.18,1),
+        z-index 0.8s cubic-bezier(.77,0,.18,1);
 }
 
-.dot.active {
-    opacity: 1;
-    background: rgb(0, 0, 0);
+/* Animate each image to move through all positions */
+.exp-imgs:nth-child(1) { animation: carousel 15s infinite; }
+.exp-imgs:nth-child(2) { animation: carousel 15s infinite 3s; }
+.exp-imgs:nth-child(3) { animation: carousel 15s infinite 6s; }
+.exp-imgs:nth-child(4) { animation: carousel 15s infinite 9s; }
+.exp-imgs:nth-child(5) { animation: carousel 15s infinite 12s; }
+
+/* Keyframes for 5 images, adjust left for each position */
+@keyframes carousel {
+    0%   { left: 0%;   opacity: 0.5; transform: scale(0.8); z-index: 1; }
+    10%  { left: 0%;   opacity: 0.5; transform: scale(0.8); z-index: 1; }
+    20%  { left: 20%;  opacity: 0.8; transform: scale(0.9); z-index: 2; }
+    30%  { left: 20%;  opacity: 0.8; transform: scale(0.9); z-index: 2; }
+    40%  { left: 40%;  opacity: 1;   transform: scale(1);   z-index: 3; }
+    50%  { left: 40%;  opacity: 1;   transform: scale(1);   z-index: 3; }
+    60%  { left: 60%;  opacity: 0.8; transform: scale(0.9); z-index: 2; }
+    70%  { left: 60%;  opacity: 0.8; transform: scale(0.9); z-index: 2; }
+    80%  { left: 80%;  opacity: 0.5; transform: scale(0.8); z-index: 1; }
+    90%  { left: 80%;  opacity: 0.5; transform: scale(0.8); z-index: 1; }
+    100% { left: 0%;   opacity: 0.5; transform: scale(0.8); z-index: 1; }
 }
 
 /* Menu Navigation */
@@ -306,50 +299,7 @@ h2 {
 }
 
 /* About Section */
-.about {
-    padding: 80px 100px;
-}
-
-.t-img{
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.t-top, .t-down{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.t-top img{
-    width: 100%;
-    border-radius: 10px;
-    height: 250px;
-    border: white 4px solid;
-}
-
-.t-down img{
-    width: 48%;
-    border-radius: 10px;
-    height: 250px;
-    object-fit: cover;
-    border: white 4px solid;
-}
-
-.t-text{
-    width: 50%;
-    height: 100%;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 20px;
-    color: white;
-}
+.about{}
 
 /* Location */
 .location {
