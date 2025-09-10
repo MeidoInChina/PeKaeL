@@ -68,7 +68,7 @@ const overlayImg = document.getElementById('overlay-img');
 const overlayDesc = document.getElementById('overlay-desc');
 const closeBtn = document.getElementById('closeBtn');
 
-<<<<<<< Updated upstream
+
 // animasi scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -95,7 +95,7 @@ closeBtn.addEventListener('click', () => overlay.style.display = 'none');
 overlay.addEventListener('click', e => {
   if (e.target === overlay) overlay.style.display = 'none';
 });
-=======
+
 // end about section
 
 // package
@@ -343,5 +343,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-// end package
->>>>>>> Stashed changes
+
