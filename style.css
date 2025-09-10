@@ -238,7 +238,135 @@ h2 {
     100% { left: 0%;   opacity: 0.5; transform: scale(0.8); z-index: 1; }
 }
 
-/* About Section */
+/* halaman baru */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #7b2e2e;
+  color: white;
+}
+
+h2 {
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.section {
+  margin: 40px 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Grid sesuai kategori */
+.amenity { grid-template-columns: repeat(4, 200px); }
+.landmark { grid-template-columns: repeat(2, 200px); }
+.culinary { grid-template-columns: repeat(3, 200px); }
+.culture { grid-template-columns: 200px; }
+.event { grid-template-columns: 200px; }
+
+.card {
+  width: 200px;
+  height: 240px;
+  background: #000000;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: inherit;
+
+  /* animasi awal */
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 0.7s ease-out;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.img {
+  flex: 1;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.desc {
+  height: 60px;
+  background: #ff5959c7;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+#overlay-content {
+  background: rgb(255, 230, 180);
+  color: black;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+#overlay-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9);}
+  to { opacity: 1; transform: scale(1);}
+}
+
 
 
 /* Footer */

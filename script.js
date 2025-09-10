@@ -60,8 +60,37 @@ modal.addEventListener('click', (e) => {
   if (e.target === modal) modal.classList.remove('active');
 });
 });
-// end Icon button toggle effect
 
-// about section
+//halaman baru
+const cards = document.querySelectorAll('.card');
+const overlay = document.getElementById('overlay');
+const overlayImg = document.getElementById('overlay-img');
+const overlayDesc = document.getElementById('overlay-desc');
+const closeBtn = document.getElementById('closeBtn');
 
-// end about section
+// animasi scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+cards.forEach((card, i) => {
+  observer.observe(card);
+
+  // Klik buka overlay
+  card.addEventListener('click', () => {
+    overlayImg.src = card.dataset.img;
+    overlayDesc.textContent = card.dataset.desc;
+    overlay.style.display = 'flex';
+  });
+});
+
+// Tutup overlay
+closeBtn.addEventListener('click', () => overlay.style.display = 'none');
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) overlay.style.display = 'none';
+});
