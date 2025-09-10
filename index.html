@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Document</title>
+    <title>Desa Wisata Kakaskasen Dua</title>
 </head>
 <body>
     <!-- navbar -->
     <nav>
         <div class="logo">
-            <img src="img/logoKK2.png">
+            <img src="img/logoKK2.png" alt="Logo">
             <span>Desa Wisata Kakaskasen Dua</span>
         </div>
         <ul class="nav-links">
@@ -25,6 +25,8 @@
             <li><a href="#">Kontak</a></li>
         </ul>
     </nav>
+    <!-- end nav -->
+
     <!-- explore more -->
     <div class="explore">
         <div class="text">
@@ -40,161 +42,101 @@
             <div class="exp-imgs" style="background-image: url('img/mountain6.png');"></div>
         </div>
     </div>
-    <div class="menu-nav">
-        <a href="#struktur">Struktur desa</a>
-        <a href="#homestay">Homestay</a>
-        <a href="#paket-wisata">Paket Wisata</a>
-        <a href="#lokasi">Lokasi</a>
-    </div>
+    <!-- end explore -->
+
     <!-- tentang desa -->
     <div class="about">
-        <h2>Amenity</h2>
-       <div class="amenity"></div>
-       <h2>Landmark</h2>
-       <div class="landmark"></div>
-       <h2>Culinary</h2>
-       <div class="culinary"></div>
-       <div class="coye"></div>
-    </div>
-    <!-- location -->
-    <div class="location">
-        <div class="container floating-2">
-            <div class="map">
-                <!-- Add your map embed code here -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429307.30942757963!2d124.56948654257678!3d1.4406900565391354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32876d1045deba53%3A0x4b60079fb9e16bd8!2sKakaskasen%20Dua%2C%20Kec.%20Tomohon%20Utara%2C%20Kota%20Tomohon%2C%20Sulawesi%20Utara!5e0!3m2!1sid!2sid!4v1756182938873!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="loc-text">
-                <h2>Lokasi Geografis dan Potensi Desa</h2>
-                <p>Tomohon, Sulawesi Utara. Terletak di antara dua gunung berapi: Gunung Lokon dan Gunung Mahawu</p>
-                <p>Jarak dari Bandara Sam Ratulangi Manado memerlukan waktu sekitar 1,5 jam menuju Kakaskasen Dua.</p>
-                <p>Kakaskasen Dua memiliki potensi di bidang pariwisata, perkebunan, dan pertanian.</p>
-            </div>
-        </div>
-    </div>
-    <!-- penginapan -->
-    <div class="lodging">
-        <h2>Penginapan Pilihan</h2>
-        <h3>Berikut adalah beberapa pilihan penginapan dari kami</h3>
-        <div class="container floating">
-            <div class="log-card">
-                <div class="log-img">
-                    <img src="img/inap1.png">
+        <!-- AMENITY -->
+        <div class="section">
+            <h2>AMENITY</h2>
+            <div class="grid amenity">
+                <div class="card" data-img="img/mountain3.png" data-desc="Terletak di kaki Gunung Mahawu, Bukit Doa adalah tempat wisata religi yang menjadi salah satu daya tarik utama di Kelurahan Kakaskasen II. Tempat ini sering dikunjungi untuk kegiatan ziarah dan retret, dengan fasilitas seperti Chapel of Mother Mary, Amphitheater, Gua Bunda Maria, dan replika Makam Yesus. Selain sebagai tempat ibadah, Bukit Doa juga menyediakan area untuk kegiatan outbound dan berkemah, menjadikannya pilihan ideal untuk wisata religi dan alam.">
+                    <div class="img"><img src="img/poster1.jpg" alt="Bukit Doa"></div>
+                    <div class="desc">Bukit Doa</div>
+                
                 </div>
-                <div class="log-info">
-                    <h2>Chrisma Bed and Breakfast</h2>
-                    <span>
-                        <div>
-                            <p>X Hari</p>
-                            <p>X Malam</p>
-                        </div>
-                        <h4>Rp XXX.XXX,-</h4>
-                    </span>
-                    <ul>
-                        <li>[No. telphon]</li>
-                        <li>Poin 2</li>
-                        <li>Poin 3</li>
-                    </ul>
+                <div class="card" data-img="img/scene1.png" data-desc="Taman Kelong, yang juga dikenal sebagai Danau Kasawean, adalah destinasi wisata alam yang terletak di kaki Gunung Mahawu. Tempat ini menawarkan pemandangan danau dan pegunungan yang indah, menjadikannya lokasi yang ideal untuk bersantai atau mengadakan acara. Dengan adanya fasilitas seperti kafe dan restoran dengan area indoor dan outdoor, Taman Kelong juga sering disewakan untuk berbagai acara pribadi seperti pesta taman, pernikahan, atau ulang tahun.">
+                    <div class="img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Taman Kelong"></div>
+                    <div class="desc">Taman Kelong</div>
                 </div>
-            </div>
-            <div class="log-card">
-                <div class="log-img">
-                    <img src="img/inap2.png">
+                <div class="card" data-img="img/scene1.png" data-desc="Gardenia Country Inn adalah penginapan yang berlokasi di tengah kebun yang luas dan indah di Tomohon. Tempat ini dikenal dengan suasana yang tenang dan damai, menjadikannya pilihan ideal untuk bersantai dan menjauh dari hiruk pikuk kota. Daya tarik utama Gardenia adalah konsep agrowisata, di mana pengunjung bisa memetik sayur dan buah langsung dari kebun, serta belajar tentang bunga hias di area greenhouse.">
+                    <div class="img"><img src="https://images.unsplash.com/photo-1606788075761-8ad4a0c1d6b6" alt="Gardenia"></div>
+                    <div class="desc">Gardenia</div>
                 </div>
-                <div class="log-info">
-                    <h2>Alina's Homestay</h2>
-                    <span>
-                        <div>
-                            <p>X Hari</p>
-                            <p>X Malam</p>
-                        </div>
-                        <h4>Rp XXX.XXX,-</h4>
-                    </span>
-                    <ul>
-                        <li>[No. telphon]</li>
-                        <li>Poin 2</li>
-                        <li>Poin 3</li>
-                    </ul>
+                <div class="card" data-img="img/scene1.png" data-desc="Sebagai bagian dari Desa Wisata Kakaskasen II, Homestay menjadi pilihan akomodasi yang populer bagi wisatawan. Penginapan-penginapan ini menawarkan pengalaman menginap yang otentik dan interaksi langsung dengan masyarakat lokal. Fasilitas yang umumnya disediakan meliputi kamar tidur, kamar mandi, sarapan, dan akses Wi-Fi, dengan harga yang bervariasi sesuai dengan jenis dan fasilitas yang ditawarkan.">
+                    <div class="img"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Homestay"></div>
+                    <div class="desc">Homestay</div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- paket -->
-    <div class="packages">
-        <h2>Paket Wisata</h2>
-        <h3>Pilih paket wisata sesuai dengan kebutuhan Anda</h3>
-        <div class="package-cards">
-            <div class="package-card" data-title="Paket Wisata Alam" data-desc="Ini penjelasan" data-img="img/poster1.jpg">
-                <img src="img/poster1.jpg" alt="Paket 1">
-                <div class="package-info">
-                    <h3>Paket Wisata Alam</h3>
-                    <p>Nikmati keindahan alam pegunungan dengan hiking dan camping.</p>
-                </div>
-            </div>
-            <div class="package-card" data-title="Paket Agrowisata" data-desc="Ini penjelasan" data-img="img/poster2.jpg">
-                <img src="img/poster2.jpg" alt="Paket 2">
-                <div class="package-info">
-                    <h3>Paket Agrowisata</h3>
-                    <p>Eksplorasi perkebunan dan pertanian khas Kakaskasen Dua.</p>
-                </div>
-            </div>
-            <div class="package-card" data-title="Paket Kuliner" data-desc="Ini penjelasan" data-img="img/poster3.jpg">
-                <img src="img/poster3.jpg" alt="Paket 3">
-                <div class="package-info">
-                    <h3>Paket Kuliner</h3>
-                    <p>Rasakan kelezatan makanan tradisional Minahasa.</p>
-                </div>
-            </div>
-            <div class="package-card" data-title="Paket Budaya" data-desc="Ini penjelasan" data-img="img/poster4.jpg">
-                <img src="img/poster4.jpg" alt="Paket 4">
-                <div class="package-info">
-                    <h3>Paket Budaya</h3>
-                    <p>Pelajari kebudayaan dan tradisi masyarakat lokal.</p>
-                </div>
-            </div>
-            <div class="package-card" data-title="Paket Fotografi" data-desc="Ini penjelasan" data-img="img/poster5.jpg">
-                <img src="img/poster5.jpg" alt="Paket 5">
-                <div class="package-info">
-                    <h3>Paket Fotografi</h3>
-                    <p>Abadikan momen indah di spot-spot instagramable.</p>
-                </div>
-            </div>
-            <div class="package-card" data-title="Paket Lengkap" data-desc="Ini penjelasan" data-img="img/poster6.jpg">
-                <img src="img/poster6.jpg" alt="Paket 6">
-                <div class="package-info">
-                    <h3>Paket Lengkap</h3>
-                    <p>Kombinasi semua pengalaman dalam satu paket spesial.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Popup -->
-    <div id="package-modal" class="package-modal">
-        <div class="package-modal-content">
-            <button class="modal-close" aria-label="Tutup">&times;</button>
-            <img id="modal-img" src="" alt="Paket" class="modal-img">
-            <div class="modal-text">
-                <h2 id="modal-title">Paket Wisata Alam</h2>
-                <h4 id="modal-desc">Nikmati keindahan alam pegunungan dengan hiking dan camping.</h4>
-                <p id="modal-detail">
-                    Jelajahi keindahan alam Desa Wisata Kakaskasen Dua dengan berbagai aktivitas outdoor yang seru dan menantang. Cocok untuk keluarga, komunitas, maupun solo traveler yang ingin menikmati udara segar dan panorama pegunungan.
-                </p>
-                <div class="modal-buttons">
-                    <button class="modal-btn modal-order">Pesan Sekarang</button>
-                    <button class="modal-btn modal-cancel">Batalkan</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Tentang Kami Section -->
-    <section class="about-us-section">
-        <div class="about-us-card">
-            <h2 class="about-us-title">Tentang Kami</h2>
-            <p class="about-us-desc">
-                Website Desa Wisata Kakaskasen 2 merupakan pusat informasi resmi yang dirancang untuk memudahkan wisatawan dalam mengenal dan menjelajahi desa wisata kami. Melalui website ini, Kalian dapat menemukan berbagai pilihan paket wisata, rekomendasi penginapan yang dikelola masyarakat, serta panduan lokasi dan aktivitas menarik yang dapat dinikmati. Kami berkomitmen untuk memberikan informasi yang jelas, terpercaya, dan mudah diakses sehingga setiap pengunjung dapat merencanakan perjalanan dengan nyaman. Lebih dari sekadar media informasi, website ini juga menjadi jembatan yang menghubungkan wisatawan dengan masyarakat Desa Wisata Kakaskasen 2 dalam semangat pariwisata berkelanjutan.
-            </p>
+        <!-- LANDMARK -->
+        <div class="section">
+            <h2>LANDMARK</h2>
+            <div class="grid landmark">
+            <div class="card" data-img="img/scene1.png" data-desc="Gunung Lokon adalah gunung berapi aktif yang terletak di dekat Kota Tomohon, Sulawesi Utara. Memiliki ketinggian 1.580 meter, namanya berarti 'yang tertua dan terbesar'. Gunung ini terkenal karena kawahnya yang terletak di sisi gunung, bukan di puncaknya. Sejarah letusan gunung ini, seperti yang terjadi pada tahun 1991 dan 2011, telah membuat tanah di sekitarnya menjadi sangat subur, cocok untuk agrowisata.">
+                <div class="img"><img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Gunung Lokon"></div>
+                <div class="desc">Gunung Lokon</div>
+            </div>
+            <div class="card" data-img="img/scene1.png" data-desc="Berada di sebelah timur Gunung Lokon, Gunung Mahawu adalah gunung berapi yang juga mengapit Kelurahan Kakaskasen II. Gunung ini memiliki ketinggian 1.324 meter dengan kawah sedalam 140 meter dan lebar 180 meter. Untuk mencapai puncaknya, pengunjung harus mendaki sekitar 160 anak tangga, di mana pemandangan yang menakjubkan dari Danau Tondano, Bunaken, dan kota-kota di sekitarnya dapat terlihat.">
+                <div class="img"><img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba" alt="Gunung Mahawu"></div>
+                <div class="desc">Gunung Mahawu</div>
+            </div>
+            </div>
         </div>
-    </section>
+        
+        <!-- CULINARY -->
+        <div class="section">
+            <h2>CULINARY</h2>
+            <div class="grid culinary">
+            <div class="card" data-img="img/scene1.png" data-desc="Dikenal juga dengan nama Tinutuan, Bubur Manado adalah makanan khas dari Sulawesi Utara yang terkenal akan rasanya yang kaya dan bergizi. Bubur ini merupakan perpaduan unik dari berbagai sayuran seperti labu kuning, singkong, jagung, bayam, kangkung, dan daun kemangi. Tinutuan biasanya disajikan sebagai sarapan, ditemani dengan ikan asin goreng, tahu goreng, dan sambal dabu-dabu yang pedas.">
+                <div class="img"><img src="https://images.unsplash.com/photo-1606788075761-8ad4a0c1d6b6" alt="Bubur Manado"></div>
+                <div class="desc">Bubur Manado</div>
+            </div>
+            <div class="card" data-img="img/scene1.png" data-desc="Nasi Jaha adalah hidangan nasi tradisional yang berasal dari Manado, Sulawesi Utara. Makanan ini terbuat dari beras ketan, beras putih, jahe, dan santan, yang dimasak dengan cara unik. Adonan nasi dimasukkan ke dalam batang bambu yang dilapisi daun pisang, lalu dibakar di atas bara api. Proses ini memberikan aroma jahe yang harum dan cita rasa yang khas. Nasi Jaha sering disajikan dengan abon ikan atau daging, gulai, atau kari.">
+                <div class="img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Nasi Jaha"></div>
+                <div class="desc">Nasi Jaha</div>
+            </div>
+            <div class="card" data-img="img/scene1.png" data-desc="Woku Daong adalah variasi dari masakan woku, bumbu khas Minahasa yang kaya rempah, yang dimasak dengan cara dibungkus dalam daun. Bumbu woku terdiri dari berbagai bahan seperti jahe, kunyit, daun jeruk, daun pandan, sereh, dan kemangi. Bumbu ini memberikan aroma harum dan rasa pedas yang unik. Cara memasak ini cocok untuk hidangan ikan, ayam, atau bebek, dan dapat dimasak dengan cara dikukus atau dibakar.">
+                <div class="img"><img src="https://images.unsplash.com/photo-1604908177225-f76c64b2e9ae" alt="Woku Daong"></div>
+                <div class="desc">Woku Daong</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- CULTURE -->
+        <div class="section">
+            <h2>CULTURE</h2>
+            <div class="grid culture">
+            <div class="card" data-img="img/scene1.png" data-desc="Tari Kabasaran adalah tarian perang tradisional masyarakat Minahasa di Sulawesi Utara yang sering ditampilkan untuk menyambut tamu penting. Tarian ini melambangkan keberanian dan kepahlawanan prajurit Minahasa yang disebut 'Waraney'. Tarian ini memiliki tiga tahap utama: Sumakalele (persiapan perang), Kumayak (kemenangan perang), dan Lalayaan (ungkapan syukur). Nama 'Kabasaran' berasal dari kata 'wasar,' yang mengacu pada ayam jago yang siap bertarung.">
+                <div class="img"><img src="https://images.unsplash.com/photo-1503264116251-35a269479413" alt="Kabasaran"></div>
+                <div class="desc">Kabasaran</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- YEARLY EVENT -->
+        <div class="section">
+            <h2>YEARLY EVENT</h2>
+            <div class="grid event">
+            <div class="card" data-img="img/scene1.png" data-desc="Tomohon International Flower Festival (TIFF) adalah festival bunga dan seni budaya berskala internasional yang diadakan setiap tahun oleh Pemerintah Kota Tomohon. Festival ini menampilkan serangkaian acara, termasuk Tournament of Flowers, yaitu parade kendaraan hias bunga yang diikuti oleh perwakilan dari berbagai negara dan perusahaan. Selain itu, ada juga kontes Ratu Bunga, pameran florikultura, dan pergelaran seni-budaya, yang bertujuan untuk mempromosikan Tomohon sebagai 'Kota Bunga' dan meningkatkan ekonomi lokal.">
+                <div class="img"><img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2" alt="Tomohon International Flower Festival"></div>
+                <div class="desc">Tomohon International Flower Festival</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay">
+            <div id="overlay-content">
+            <span id="closeBtn">&times;</span>
+            <img id="overlay-img" src="" alt="Preview">
+            <p id="overlay-desc"></p>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+
     <!-- footer -->
     <footer>
         <div class="footer-container">
@@ -266,56 +208,7 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </footer>
-
-    <script>
-        // JavaScript for modal popup
-        const packageCards = document.querySelectorAll('.package-card');
-        const modal = document.getElementById('package-modal');
-        const modalImg = document.getElementById('modal-img');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDesc = document.getElementById('modal-desc');
-        const modalDetail = document.getElementById('modal-detail');
-        const modalOrder = document.querySelector('.modal-order');
-        const modalCancel = document.querySelector('.modal-cancel');
-        const modalClose = document.querySelector('.modal-close');
-
-        // Paket detail (optional, bisa diisi sesuai kebutuhan)
-        const paketDetails = [
-            "Jelajahi keindahan alam Desa Wisata Kakaskasen Dua dengan berbagai aktivitas outdoor yang seru dan menantang. Cocok untuk keluarga, komunitas, maupun solo traveler yang ingin menikmati udara segar dan panorama pegunungan.",
-            "Nikmati pengalaman agrowisata dengan mengunjungi perkebunan dan pertanian lokal, belajar langsung dari petani, dan rasakan hasil bumi segar khas Kakaskasen Dua.",
-            "Wisata kuliner khas Minahasa, cicipi berbagai makanan tradisional yang lezat dan unik, serta pelajari proses pembuatannya bersama warga lokal.",
-            "Kenali budaya dan tradisi masyarakat Kakaskasen Dua melalui pertunjukan seni, kerajinan tangan, dan interaksi langsung dengan komunitas.",
-            "Abadikan momen terbaik di spot-spot foto instagramable, dapatkan tips fotografi dari guide lokal, dan bawa pulang kenangan visual yang tak terlupakan.",
-            "Paket lengkap untuk Anda yang ingin merasakan semua pengalaman wisata di Kakaskasen Dua, mulai dari alam, budaya, kuliner, hingga fotografi."
-        ];
-
-        packageCards.forEach((card, idx) => {
-            card.addEventListener('click', () => {
-                const title = card.getAttribute('data-title');
-                const desc = card.querySelector('.package-info p').textContent;
-                const img = card.getAttribute('data-img');
-                modalTitle.textContent = title;
-                modalDesc.textContent = desc;
-                modalImg.setAttribute('src', img);
-                modalDetail.textContent = paketDetails[idx] || desc;
-                modal.classList.add('active');
-            });
-        });
-
-        modalCancel.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-    </script>
+    <!-- end footer -->
 
 </body>
 </html>
