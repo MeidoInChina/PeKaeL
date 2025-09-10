@@ -238,66 +238,6 @@ h2 {
     100% { left: 0%;   opacity: 0.5; transform: scale(0.8); z-index: 1; }
 }
 
-/* Menu Navigation */
-.menu-nav {
-    width: 75%;
-    margin: 15px auto;
-    display: flex;
-    border-radius: 30px;
-    justify-content: space-evenly;
-    padding: 30px 1px;
-    background: #B22222;
-    gap: 100px;
-    box-shadow: 10px 10px 3px rgba(100, 31, 31, 0.715)
-}
-
-.menu-nav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 400;
-    transition: 0.3s;
-    position: relative;
-}
-
-.menu-nav a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scale(0);
-    height: 2px;
-    bottom: 0;
-    background: #661515;
-    left: 0;
-    transform-origin: bottom-right;
-    transition: transform 0.3s ease-out;
-}
-
-.menu-nav a:hover {
-    color: #B22222;
-    cursor: pointer;
-}
-
-.menu-nav a:hover::after {
-    transform: scale(1);
-    transform-origin: bottom-left;
-}
-
-.menu-nav a:hover {
-    color: #511717;
-}
-
-/* Tambahkan overlay pada slide */
-.slide::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
-
 /* About Section */
 .section {
     margin: 40px 20px;
