@@ -355,6 +355,8 @@ h2 {
     color: white;
     border: #fff 10px solid;
     border-radius: 25px;
+    box-shadow: 0 0 15px #B22222;
+    transition: box-shadow 0.3s ease;
 }
 
 .log-card img{
@@ -424,10 +426,11 @@ h2 {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     width: 100%;
     height: 100%;
+    box-shadow: 0 0 15px #B22222;
 }
 
 .package-card img {
@@ -450,31 +453,167 @@ h2 {
 
 .package-card:hover {
     transform: scale(1.02);
+    box-shadow: 0 0 25px #B22222;
 }
 
 .package-card:hover .package-info {
     transform: translateY(0);
 }
 
-@media (max-width: 1200px) {
-    .packages {
-        padding: 40px;
-    }
-    
-    .package-cards {
-        grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(3, 450px);
-    }
+.package-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    .packages {
-        padding: 20px;
+.package-modal.active {
+    display: flex;
+}
+
+.package-modal-content {
+    background: #18171c;
+    border-radius: 24px;
+    box-shadow: 0 0 40px #B22222, 0 8px 32px rgba(0,0,0,0.6);
+    max-width: 700px;
+    width: 95vw;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    background: transparent;
+    border: none;
+    font-size: 2.2em;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: #B22222;
+}
+
+.modal-img {
+    width: 45%;
+    min-width: 220px;
+    height: 320px;
+    object-fit: cover;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background: #222;
+}
+
+.modal-text {
+    width: 55%;
+    padding: 32px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.package-modal-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.7em;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #B22222;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+.package-modal-content h4 {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: left;
+    font-weight: 400;
+}
+
+.package-modal-content p {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 22px;
+    width: 100%;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    justify-content: left;
+}
+
+.modal-btn {
+    padding: 10px 28px;
+    border-radius: 10px;
+    border: 1px solid #B22222;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: inherit;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(178,34,34,0.15);
+}
+
+.modal-order {
+    background: #B22222;
+    color: #fff;
+    font-weight: 500;
+}
+
+.modal-order:hover {
+    background: #fff;
+    color: #B22222;
+    box-shadow: 0 0 12px #B22222;
+}
+
+.modal-cancel {
+    background: transparent;
+    color: #fff;
+    font-weight: 500;
+}
+
+.modal-cancel:hover {
+    background: #B22222;
+    color: #fff;
+    box-shadow: 0 0 12px #B22222;
+}
+
+@media (max-width: 900px) {
+    .package-modal-content {
+        flex-direction: column;
+        max-width: 95vw;
     }
-    
-    .package-cards {
-        grid-template-columns: 300px;
-        grid-template-rows: repeat(6, 450px);
+    .modal-img {
+        width: 100%;
+        height: 220px;
+        border-radius: 24px 24px 0 0;
+        min-width: unset;
+    }
+    .modal-text {
+        width: 100%;
+        padding: 24px 18px 18px 18px;
+    }
+    .modal-close {
+        top: 10px;
+        right: 18px;
+        font-size: 2em;
     }
 }
 
@@ -633,4 +772,38 @@ h2 {
 .footer-bottom p {
   margin-top: 10px;
   font-size: 14px;
+}
+
+/* About Us Section */
+.about-us-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 40px 0;
+}
+
+.about-us-card {
+    background: rgba(20,20,20,0.85);
+    border-radius: 20px;
+    box-shadow: 0 0 20px #B22222;
+    max-width: 700px;
+    width: 90vw;
+    padding: 40px 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-us-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.about-us-desc {
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: center;
 }

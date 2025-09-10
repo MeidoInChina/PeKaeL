@@ -35,4 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Paket Wisata Modal Popup
+  const modal = document.getElementById('package-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalDetail = document.getElementById('modal-detail');
+  const orderBtn = document.querySelector('.modal-order');
+  const cancelBtn = document.querySelector('.modal-cancel');
+
+  document.querySelectorAll('.package-card').forEach(card => {
+    card.addEventListener('click', () => {
+      modal.classList.add('active');
+      modalImg.src = card.getAttribute('data-img');
+      modalTitle.textContent = card.getAttribute('data-title');
+      modalDesc.textContent = card.getAttribute('data-desc');
+      // modalDetail tetap default, bisa diubah jika ingin detail berbeda
+    });
+  });
+
+  cancelBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  // Optional: close modal when clicking outside content
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('active');
+  });
 });
