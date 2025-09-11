@@ -106,16 +106,17 @@ overlay.addEventListener('click', e => {
 // =====================================================================================================
 class Carousel {
     constructor() {
-        this.currentSlide = 2; // Start with the center slide
+        this.currentSlide = 0;
         this.totalSlides = 6;
-        this.slides = document.querySelectorAll('.carousel-slide');
+        this.slidesToShow = 3;
+        this.slidesToScroll = 1;
         this.viewport = document.getElementById('carouselViewport');
         this.prevBtn = document.getElementById('prevBtn');
         this.nextBtn = document.getElementById('nextBtn');
         this.indicators = document.querySelectorAll('.indicator');
         
         this.init();
-        this.updateCarousel();
+        this.updateResponsive();
     }
     
     init() {
@@ -126,41 +127,56 @@ class Carousel {
             indicator.addEventListener('click', () => this.goToSlide(index));
         });
         
+        window.addEventListener('resize', () => this.updateResponsive());
+        
         this.addTouchSupport();
         this.addCardClickHandlers();
     }
     
-    updateCarousel() {
-        // Remove all active classes first
-        this.slides.forEach(slide => {
-            slide.className = 'carousel-slide';
-        });
-        
-        // Add appropriate active classes to visible slides
-        for (let i = 0; i < 5; i++) {
-            const slideIndex = (this.currentSlide - 2 + i + this.totalSlides) % this.totalSlides;
-            this.slides[slideIndex].classList.add(`active-${i + 1}`);
+    updateResponsive() {
+        if (window.innerWidth <= 768) {
+            this.slidesToShow = 1;
+        } else if (window.innerWidth <= 1024) {
+            this.slidesToShow = 2;
+        } else {
+            this.slidesToShow = 3;
         }
+        this.updateCarousel();
+    }
+    
+    updateCarousel() {
+        const slideWidth = 100 / this.slidesToShow;
+        const translateX = -this.currentSlide * slideWidth;
+        this.viewport.style.transform = `translateX(${translateX}%)`;
         
         // Update indicators
-        const indicatorIndex = Math.floor(this.currentSlide / 2);
+        const indicatorIndex = Math.floor(this.currentSlide / this.slidesToScroll);
         this.indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === indicatorIndex);
         });
     }
     
     nextSlide() {
-        this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+        const maxSlide = this.totalSlides - this.slidesToShow;
+        if (this.currentSlide < maxSlide) {
+            this.currentSlide += this.slidesToScroll;
+        } else {
+            this.currentSlide = 0;
+        }
         this.updateCarousel();
     }
     
     previousSlide() {
-        this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        if (this.currentSlide > 0) {
+            this.currentSlide -= this.slidesToScroll;
+        } else {
+            this.currentSlide = this.totalSlides - this.slidesToShow;
+        }
         this.updateCarousel();
     }
     
     goToSlide(slideIndex) {
-        this.currentSlide = slideIndex * 2;
+        this.currentSlide = slideIndex * this.slidesToScroll;
         this.updateCarousel();
     }
     
@@ -190,7 +206,7 @@ class Carousel {
     }
     
     addCardClickHandlers() {
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.package-card');
         cards.forEach(card => {
             card.addEventListener('click', () => {
                 const cardId = card.getAttribute('data-card');
@@ -319,6 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'auto';
     });
     
+    exploreCloseBtn.addEventListener('click', () => {
+        exploreOverlay.style.display = 'none';
+    });
+
     bookButton.addEventListener('click', () => {
         alert('Terima kasih! Anda akan diarahkan ke halaman pemesanan.');
         modal.style.display = 'none';
@@ -329,6 +349,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target === modal) {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
+        }
+        if (event.target === exploreOverlay) {
+            exploreOverlay.style.display = 'none';
         }
     });
 });
