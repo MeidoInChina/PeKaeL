@@ -357,3 +357,46 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // =====================================================================================================
 // end package
+
+//Sponsor
+// =====================================================================================================
+function loadLogos() {
+            // Your logo file paths from the img folder
+            const logoFiles = [
+                'img/sponsor1.png',
+                'img/sponsor2.png', 
+                'img/sponsor3.png',
+                'img/sponsor4.jpg'
+            ];
+
+            const tickerContent = document.getElementById('tickerContent');
+            
+            // Create two sets of logos for seamless looping
+            for (let set = 0; set < 2; set++) {
+                logoFiles.forEach((logoPath, index) => {
+                    const logoItem = document.createElement('div');
+                    logoItem.className = 'logo-item';
+                    
+                    const img = document.createElement('img');
+                    img.src = logoPath;
+                    img.alt = `Company Logo ${index + 1}`;
+                    img.onerror = function() {
+                        // Fallback if image doesn't load
+                        this.src = `data:image/svg+xml;base64,${btoa(`
+                            <svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="50" fill="#333" stroke="#666" stroke-width="2"/>
+                                <text x="100" y="30" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Logo ${index + 1}</text>
+                            </svg>
+                        `)}`;
+                    };
+                    
+                    logoItem.appendChild(img);
+                    tickerContent.appendChild(logoItem);
+                });
+            }
+        }
+
+        // Load logos when page loads
+        window.addEventListener('load', loadLogos);
+// =====================================================================================================
+// end sponsor
