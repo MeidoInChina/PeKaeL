@@ -102,7 +102,7 @@ nav .logo span {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(#00000080, #0000008f), url(img/dance11.jpg);
+    background: linear-gradient(#00000080, #0000008f), url(img/mountain6.png);
     background-position: center;
     background-size: cover;
 }
@@ -132,7 +132,7 @@ nav .logo span {
 
 .text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -172,7 +172,6 @@ h2 {
     text-decoration: none;
     border-radius: 25px;
     font-size: 1em;
-    margin-top: 20px;
     border: 2px solid #B22222;
     transition: all 0.3s ease;
 }
