@@ -102,7 +102,7 @@ nav .logo span {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(#00000080, #0000008f), url(img/dance11.jpg);
+    background: linear-gradient(#00000080, #0000008f), url(img/mountain6.png);
     background-position: center;
     background-size: cover;
 }
@@ -132,7 +132,7 @@ nav .logo span {
 
 .text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -146,7 +146,7 @@ nav .logo span {
 }
 
 .text p {
-    font-size: 1.5em;
+    font-size: 3em;
     font-weight: 300;
     font-style: italic;
     color: #ffffff;
@@ -172,7 +172,6 @@ h2 {
     text-decoration: none;
     border-radius: 25px;
     font-size: 1em;
-    margin-top: 20px;
     border: 2px solid #B22222;
     transition: all 0.3s ease;
 }
@@ -188,7 +187,7 @@ h2 {
 
 .exp-img {
     position: absolute;
-    bottom: 240px;
+    bottom: 210px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -673,26 +672,6 @@ p {
     margin-top: 20px;
 }
 
-.cta-button {
-    display: inline-block;
-    background: #e74c3c;
-    color: white;
-    padding: 14px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-.cta-button:hover {
-    background: #c0392b;
-    transform: translateY(-3px);
-    box-shadow: 0 7px 15px rgba(231, 76, 60, 0.4);
-}
-
 .social-icons {
     display: flex;
     gap: 15px;
@@ -731,6 +710,14 @@ p {
 
 .social-icon:hover.email {
     background: #B23121;
+}
+
+.social-icon.instagram {
+    background: #E1306C;
+}
+
+.social-icon:hover.instagram {
+    background: #C13584;
 }
 
 @media (max-width: 1024px) {
@@ -1021,3 +1008,58 @@ p {
     line-height: 1.7;
     text-align: center;
 }
+
+/* sponsor */
+.ticker-wrapper {
+            width: 100%;
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            height: 80px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .ticker-content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            animation: scroll-left 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .logo-item {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 40px;
+            flex-shrink: 0;
+        }
+
+        .logo-item img {
+            height: 50px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Pause animation on hover */
+        .ticker-wrapper:hover .ticker-content {
+            animation-play-state: paused;
+        }
+
+        .ticker-title {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+/* End of sponsor */
