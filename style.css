@@ -906,6 +906,28 @@ p {
     font-weight: bold;
     padding: 0 10px;
 }
+
+#nginep-modal-id .social-icon {
+    position: relative;
+    cursor: pointer;
+}
+#nginep-modal-id .bubble {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+
 /* end penginapan */
 
 /* Footer */
@@ -990,12 +1012,30 @@ p {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* ensure links inside icons don't override colors */
+.wrapper .icon a {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* SVGs inherit color from the li and transition smoothly */
+.wrapper .icon svg {
+  color: inherit;
+  transition: color .18s ease;
+  height: 1.2em;
+  width: auto;
+  pointer-events: none;
+}
+
 .wrapper .tooltip {
   position: absolute;
   top: 0;
   font-size: 14px;
   background: #fff;
-  color: #fff;
+  color: #000; /* readable text */
   padding: 5px 8px;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -1028,20 +1068,46 @@ p {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== Default brand colors (normal state) ===== */
+.wrapper .facebook svg   { color: #1877F2; } /* Facebook blue */
+.wrapper .instagram svg  { color: #E4405F; } /* Instagram */
+.wrapper .whatsapp svg   { color: #25D366; } /* WhatsApp green */
+.wrapper .email svg      { color: #EA4335; } /* Gmail red */
+
+/* ===== Hover states ===== */
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tooltip,
 .wrapper .facebook:hover .tooltip::before {
-  background: #1877f2;
+  background: #1877F2;
   color: #fff;
 }
+.wrapper .facebook:hover svg { color: #fff; }
 
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-  background: #e4405f;
+  background: #E4405F;
   color: #fff;
 }
+.wrapper .instagram:hover svg { color: #fff; }
 
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #25D366;
+  color: #fff;
+}
+.wrapper .whatsapp:hover svg { color: #fff; }
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background: #EA4335;
+  color: #fff;
+}
+.wrapper .email:hover svg { color: #fff; }
+
+/* Existing global link style (still works elsewhere) */
 .social-icons a {
   color: #fff;
   margin-right: 10px;

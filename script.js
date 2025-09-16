@@ -400,3 +400,32 @@ function loadLogos() {
         window.addEventListener('load', loadLogos);
 // =====================================================================================================
 // end sponsor
+
+// Footer social icon tooltip/copy effect
+// ====================================================================================================
+document.querySelectorAll('.footer-column .icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    const tooltip = icon.querySelector('.tooltip');
+    if (tooltip) {
+      const originalText = tooltip.textContent;
+
+      // Copy tooltip text to clipboard
+      navigator.clipboard.writeText(originalText);
+
+      tooltip.textContent = 'Copied!';
+      setTimeout(() => {
+        if (icon.classList.contains('facebook')) {
+          tooltip.textContent = 'Facebook_account_unknown';
+        } else if (icon.classList.contains('instagram')) {
+          tooltip.textContent = '@kampung.wisata.kakaskasen_dua';
+        } else if (icon.classList.contains('whatsapp')) {
+          tooltip.textContent = '+62 85 3970 72088';
+        } else if (icon.classList.contains('email')) {
+          tooltip.textContent = 'pokdanwisvictory@gmail.com';
+        }
+      }, 1200);
+    }
+  });
+});
+// =====================================================================================================
+// end footer social icon tooltip/copy effect
