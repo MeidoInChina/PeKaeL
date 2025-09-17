@@ -377,6 +377,128 @@ p {
 
 /* end about */
 
+/* lembaga */
+
+.lembaga{
+    width: 100vw;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.lembaga h1{
+    color: #5b1212;
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.lembody{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.lemtext{
+    max-width: 500px;
+}
+
+.lembgs{
+    max-width: 600px;
+}
+
+.lemtext, .lembgs{
+    flex: 1 1 400px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lemtitle{
+    font-size: 1.75em;
+    color: #5b1212;
+    margin-bottom: 20px;
+    background-color: #c36262;
+    width: fit-content;
+    padding: 20px 35px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.lemdesc p{
+    font-size: 1.1em;
+    color: #eeeeee;
+    text-align: justify;
+    line-height: 1.6;
+    background-color: #c36262;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.leminmaps{
+    width: 100%;
+    height: 600px;
+}
+
+.lembisnis li, .lempersewaan li{
+    list-style: none;
+    margin: 8px 0;
+    width: fit-content;
+    text-align: left;
+    font-size: 1.1em;
+    color: #eeeeee;
+    background-color: #c36262;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.leminmaps {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+    .node {
+    position: absolute;
+    background-color: #c36262;
+    color: #eee;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Positioning nodes to match diagram */
+.center { top: 5%; left: 50%; transform: translateX(-50%); }
+.left-top { top: 25%; left: 10%; }
+.left-mid { top: 45%; left: 20%; }
+.right-top { top: 25%; right: 10%; }
+.bottom-mid { top: 45%; left: 65%; transform: translateX(-50%); }
+.bottom-left { top: 80%; left: 35%; }
+.bottom-right { top: 80%; right: 10%; }
+
+.arrows {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.arrows line {
+    stroke: black;
+    stroke-width: 2;
+}
+
+
+/* end lembaga */
+
 /* package */
 .package{
     text-align: center;
