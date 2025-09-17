@@ -401,6 +401,205 @@ function loadLogos() {
 // =====================================================================================================
 // end sponsor
 
+// Penginapan
+// =====================================================================================================
+class UniqueDualTourismPackageCarousel {
+            constructor() {
+                this.leftCarousel = {
+                    currentSlide: 1,
+                    totalSlides: 3,
+                    slides: document.querySelectorAll('.unique-dtp-left-carousel .unique-dtp-carousel-slide'),
+                    viewport: document.getElementById('uniqueDtpLeftCarouselViewport')
+                };
+                
+                this.rightCarousel = {
+                    currentSlide: 1,
+                    totalSlides: 3,
+                    slides: document.querySelectorAll('.unique-dtp-right-carousel .unique-dtp-carousel-slide'),
+                    viewport: document.getElementById('uniqueDtpRightCarouselViewport')
+                };
+                
+                this.init();
+                this.updateCarousel('left');
+                this.updateCarousel('right');
+            }
+            
+            init() {
+                // Navigation buttons
+                document.querySelectorAll('.unique-dtp-carousel-nav').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const carousel = e.target.dataset.carousel;
+                        const direction = e.target.classList.contains('unique-dtp-prev') ? 'prev' : 'next';
+                        
+                        if (direction === 'prev') {
+                            this.previousSlide(carousel);
+                        } else {
+                            this.nextSlide(carousel);
+                        }
+                    });
+                });
+                
+                this.addTouchSupport();
+                this.addCardClickHandlers();
+            }
+            
+            updateCarousel(side) {
+                const carousel = this[side + 'Carousel'];
+                
+                // Remove all active classes first
+                carousel.slides.forEach(slide => {
+                    slide.className = 'unique-dtp-carousel-slide';
+                });
+                
+                // Add appropriate active classes to 3 visible slides
+                for (let i = 0; i < 3; i++) {
+                    const slideIndex = (carousel.currentSlide - 1 + i + carousel.totalSlides) % carousel.totalSlides;
+                    carousel.slides[slideIndex].classList.add(`unique-dtp-active-${i + 1}`);
+                }
+            }
+            
+            nextSlide(side) {
+                const carousel = this[side + 'Carousel'];
+                carousel.currentSlide = (carousel.currentSlide % carousel.totalSlides) + 1;
+                this.updateCarousel(side);
+            }
+            
+            previousSlide(side) {
+                const carousel = this[side + 'Carousel'];
+                carousel.currentSlide = carousel.currentSlide === 1 ? carousel.totalSlides : carousel.currentSlide - 1;
+                this.updateCarousel(side);
+            }
+            
+            addTouchSupport() {
+                ['left', 'right'].forEach(side => {
+                    const viewport = this[side + 'Carousel'].viewport;
+                    let startX = 0;
+                    let currentX = 0;
+                    let diffX = 0;
+                    
+                    viewport.addEventListener('touchstart', (e) => {
+                        startX = e.touches[0].clientX;
+                    });
+                    
+                    viewport.addEventListener('touchmove', (e) => {
+                        currentX = e.touches[0].clientX;
+                        diffX = startX - currentX;
+                    });
+                    
+                    viewport.addEventListener('touchend', () => {
+                        if (Math.abs(diffX) > 50) {
+                            if (diffX > 0) {
+                                this.nextSlide(side);
+                            } else {
+                                this.previousSlide(side);
+                            }
+                        }
+                    });
+                });
+            }
+            
+            addCardClickHandlers() {
+                const cards = document.querySelectorAll('.unique-dtp-card');
+                cards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        const carouselType = card.getAttribute('data-carousel');
+                        this.showPackageDetails(carouselType);
+                    });
+                });
+            }
+            
+            showPackageDetails(carouselType) {
+                // Get modal elements
+                const modal = document.getElementById('uniqueDtpPackageModal');
+                const modalHeader = document.getElementById('uniqueDtpModalHeader');
+                const modalBody = document.getElementById('uniqueDtpModalBody');
+                const modalTitle = document.getElementById('uniqueDtpModalPackageTitle');
+                const modalIntro = document.getElementById('uniqueDtpModalPackageIntro');
+                const modalPoints = document.getElementById('uniqueDtpModalPackagePoints');
+                
+                // Package data based on carousel type (only 2 types now)
+                const packages = {
+                    'adventure': {
+                        title: "Charisma Bed and BreakFast",
+                        type: "unique-dtp-adventure",
+                        intro: "Rasakan pengalaman petualangan tak terlupakan dengan berbagai pilihan aktivitas outdoor yang menantang. Dari hiking ke gunung berapi hingga berburu tikus ekor putih, setiap petualangan memberikan perspektif baru tentang keindahan alam dan budaya Minahasa.",
+                        points: [
+                            "Minahasa Highland Tour: Jelajahi Gunung Lokon/Mahawu, kunjungi Extreme Market, dan nikmati keindahan air terjun serta danau-danau menawan",
+                            "Walking Tour Kakaskasen II: Berjalan santai mengelilingi desa dengan latar Gunung Lokon dan kunjungi Pagoda yang ikonik",
+                            "MEMERET (Berburu Tikus Ekor Putih): Pengalaman unik berburu malam hari menggunakan peralatan tradisional, dilengkapi cooking class",
+                            "Pemandian Air Panas Alami: Rilekskan tubuh dan pikiran di sumber air panas yang menyegarkan",
+                            "Spot Fotografi Menawan: Dapatkan foto-foto Instagram-worthy di berbagai lokasi indah sepanjang perjalanan"
+                        ]
+                    },
+                    'culture': {
+                        title: "Alina's Homestay",
+                        type: "unique-dtp-culture",
+                        intro: "Temukan kedalaman budaya Minahasa melalui pengalaman interaktif yang menghubungkan Anda dengan tradisi, seni, dan kearifan lokal. Setiap aktivitas dirancang untuk memberikan pemahaman yang mendalam tentang nilai-nilai budaya yang telah diwariskan turun-temurun.",
+                        points: [
+                            "Tarian Perang Kabasaran: Saksikan dan pelajari tarian perang tradisional yang penuh makna filosofis dari instruktur berpengalaman",
+                            "Wisata Edukasi Budaya & Kreativitas: Belajar kolintang tradisional, membuat handycraft perca kain, dan cooking class masakan Minahasa",
+                            "Walking Tour Taman Kelong: Healing di tengah kebun bunga yang indah sambil mengenal budaya lokal lebih dalam",
+                            "Workshop Kerajinan Tradisional: Pelajari teknik pembuatan kerajinan bambu dan anyaman khas Minahasa",
+                            "Storytelling Budaya: Dengarkan cerita legendaris dan sejarah budaya Minahasa langsung dari tetua dan narasumber lokal"
+                        ]
+                    }
+                };
+                
+                // Set modal content based on selected carousel type
+                const selectedPackage = packages[carouselType];
+                
+                // Set modal style based on package type
+                modalHeader.className = `unique-dtp-modal-header ${selectedPackage.type}`;
+                modalBody.className = `unique-dtp-modal-body ${selectedPackage.type}`;
+                
+                modalTitle.textContent = selectedPackage.title;
+                modalIntro.textContent = selectedPackage.intro;
+                
+                // Create points list
+                if (selectedPackage.points.length > 0) {
+                    modalPoints.innerHTML = '<ul>' + 
+                        selectedPackage.points.map(point => `<li>${point}</li>`).join('') + 
+                        '</ul>';
+                } else {
+                    modalPoints.innerHTML = '';
+                }
+                
+                // Show modal
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = new UniqueDualTourismPackageCarousel();
+            
+            // Close modal functionality
+            const modal = document.getElementById('uniqueDtpPackageModal');
+            const closeModal = document.getElementById('uniqueDtpCloseModal');
+            
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (modal.style.display === 'block' && e.key === 'Escape') {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+// =====================================================================================================
+// end penginapan
+
 // Footer social icon tooltip/copy effect
 // ====================================================================================================
 document.querySelectorAll('.footer-column .icon').forEach(icon => {

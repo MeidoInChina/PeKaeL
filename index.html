@@ -298,36 +298,85 @@
     <!-- end package -->
 
     <!-- penginapan -->
-    <div class="penginapan">
-        <h2>Penginapan</h2>
-        <!-- body -->
-        <div class="nginep-body">
-            <div class="nginep-card">
-                <div class="nginep-img1"></div>
-                <div class="nginep-name">Chrisma Bed and Breakfast</div>
-            </div>
-            <div class="nginep-card">
-                <div class="nginep-img2"></div>
-                <div class="nginep-name">Gardenia Country Inn</div>
+    <div class="unique-dtp-main-container">
+        <!-- Left Carousel - Adventure Packages -->
+        <div class="unique-dtp-carousel-section unique-dtp-left-carousel">
+            <h2 class="unique-dtp-section-title">Charisma Bed and BreakFast</h2>
+            <div class="unique-dtp-carousel">
+                <div class="unique-dtp-carousel-viewport" id="uniqueDtpLeftCarouselViewport">
+                    <div class="unique-dtp-carousel-slide">
+                        <div class="unique-dtp-card" data-carousel="adventure">
+                            <div class="unique-dtp-card-image unique-dtp-card-1">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="unique-dtp-carousel-slide">
+                        <div class="unique-dtp-card" data-carousel="adventure">
+                            <div class="unique-dtp-card-image unique-dtp-card-2">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="unique-dtp-carousel-slide">
+                        <div class="unique-dtp-card" data-carousel="adventure">
+                            <div class="unique-dtp-card-image unique-dtp-card-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="unique-dtp-carousel-nav unique-dtp-prev" data-carousel="left">‹</button>
+                <button class="unique-dtp-carousel-nav unique-dtp-next" data-carousel="left">›</button>
             </div>
         </div>
-        <!-- modal for penginapan details -->
-        <div id="nginep-modal-id" class="nginep-modal">
-            <div class="nginep-content">
-                <span class="close-nginep" id="closeNginep">&times;</span>
-                <div class="nginep-mHeader">
-                    <div class="nginep-imgR"></div>
-                        <h2 id="nginep-title">Nama Tempat</h2>
-                        <ul class="nginep-details">
-                            <li class="nginep-desc"></li>
-                            <li class="nginep-loc"><i class="fas fa-map-marker-alt"></i><a href="" target="_blank" rel="noopener"> Lokasi desa wisatanya</a></li>
-                        </ul>
-                        <ul class="nginep-pros">
-                            <li class="facility"></li>
-                            <li class="food"></li>
-                            <li class="other"></li>
-                        </ul>
+
+        <!-- Right Carousel - Culture Packages -->
+        <div class="unique-dtp-carousel-section unique-dtp-right-carousel">
+            <h2 class="unique-dtp-section-title">Alina's Homestay</h2>
+            <div class="unique-dtp-carousel">
+                <div class="unique-dtp-carousel-viewport" id="uniqueDtpRightCarouselViewport">
+                    <div class="unique-dtp-carousel-slide">
+                        <div class="unique-dtp-card" data-carousel="culture">
+                            <div class="unique-dtp-card-image unique-dtp-card-1">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="unique-dtp-carousel-slide">
+                        <div class="unique-dtp-card" data-carousel="culture">
+                            <div class="unique-dtp-card-image unique-dtp-card-2">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="unique-dtp-carousel-slide">
+                        <div class="unique-dtp-card" data-carousel="culture">
+                            <div class="unique-dtp-card-image unique-dtp-card-3">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <button class="unique-dtp-carousel-nav unique-dtp-prev" data-carousel="right">‹</button>
+                <button class="unique-dtp-carousel-nav unique-dtp-next" data-carousel="right">›</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for package details -->
+    <div id="uniqueDtpPackageModal" class="unique-dtp-modal">
+        <div class="unique-dtp-modal-content">
+            <span class="unique-dtp-close-modal" id="uniqueDtpCloseModal">&times;</span>
+            <div class="unique-dtp-modal-header" id="uniqueDtpModalHeader">
+                <div class="unique-dtp-modal-title">
+                    <h2 id="uniqueDtpModalPackageTitle">Nama Paket</h2>
+                </div>
+            </div>
+            <div class="unique-dtp-modal-body" id="uniqueDtpModalBody">
+                <h3>Detail Homestay</h3>
+                <p id="uniqueDtpModalPackageIntro"></p>
+                <div class="unique-dtp-detail-points" id="uniqueDtpModalPackagePoints"></div>
             </div>
         </div>
     </div>
