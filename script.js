@@ -628,3 +628,19 @@ document.querySelectorAll('.footer-column .icon').forEach(icon => {
 });
 // =====================================================================================================
 // end footer social icon tooltip/copy effect
+
+// maps
+// =====================================================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".mapbtn");
+  const pinsnlines = document.querySelector(".pinsnlines");
+
+  // Default: pins and lines hidden
+  pinsnlines.classList.add("hidden");
+
+  toggleBtn.addEventListener("click", () => {
+    pinsnlines.classList.toggle("hidden");
+  });
+});
+// =====================================================================================================
+// end maps

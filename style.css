@@ -377,6 +377,62 @@ p {
 
 /* end about */
 
+/* map */
+
+.maps{
+    width: 100vw;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.maps h1{
+    color: #5b1212;
+    font-size: 3em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.themap {
+    position: relative;
+    display: inline-block;
+}
+
+.themap img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pinsnlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  transition: opacity 0.3s ease; /* smooth effect */
+}
+
+.pinsnlines.hidden {
+    opacity: 0;
+    pointer-events: none; /* makes it unclickable when hidden */
+}
+
+.pin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line {
+    position: absolute;
+    border-top: 3px solid red;
+}
+
+/* end map */
+
 /* lembaga */
 
 .lembaga{
