@@ -1590,13 +1590,24 @@ p {
 .wrapper .email svg      { color: #EA4335; } /* Gmail red */
 
 /* ===== Hover states ===== */
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before {
-  background: #1877F2;
+.wrapper .youtube svg   { color: #FF0000; } /* YouTube red */
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #FF0000;
   color: #fff;
 }
-.wrapper .facebook:hover svg { color: #fff; }
+.wrapper .youtube:hover svg { color: #fff; }
+
+/* Tambahkan YouTube di social icons paket wisata */
+.social-icon.youtube {
+    background: #FF0000;
+}
+
+.social-icon:hover.youtube {
+    background: #CC0000;
+}
 
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,

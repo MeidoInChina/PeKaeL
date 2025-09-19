@@ -613,12 +613,12 @@ document.querySelectorAll('.footer-column .icon').forEach(icon => {
 
       tooltip.textContent = 'Copied!';
       setTimeout(() => {
-        if (icon.classList.contains('facebook')) {
-          tooltip.textContent = 'Facebook_account_unknown';
+        if (icon.classList.contains('youtube')) {
+          tooltip.textContent = '@kampungwisatakakaskasendua';
         } else if (icon.classList.contains('instagram')) {
           tooltip.textContent = '@kampung.wisata.kakaskasen_dua';
         } else if (icon.classList.contains('whatsapp')) {
-          tooltip.textContent = '+62 85 3970 72088';
+          tooltip.textContent = '+62 85 3970 72088';
         } else if (icon.classList.contains('email')) {
           tooltip.textContent = 'pokdanwisvictory@gmail.com';
         }
