@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // =====================================================================================================
 // end package
 
-//Sponsor
+ //Sponsor
 // =====================================================================================================
 function loadLogos() {
             // Your logo file paths from the img folder
