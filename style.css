@@ -346,7 +346,6 @@ h2 {
 
 p {
   margin-bottom: 20px;
-  color: #000000;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -491,57 +490,278 @@ p {
 
 /* map */
 
-.maps{
-    width: 100vw;
-    padding: 60px 20px;
-    text-align: center;
-}
+.kakaskasen-maps-section {
+            width: 100vw;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #FFEDD5 0%, #F4E4C1 100%);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.maps h1{
-    color: #5b1212;
-    font-size: 3em;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
+        .kakaskasen-maps-section__title {
+            margin-bottom: 40px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #74130a;
+            text-shadow: 3px 3px 6px rgba(116, 19, 10, 0.3);
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+        }
 
-.themap {
-    position: relative;
-    display: inline-block;
-}
+        .kakaskasen-maps-section__title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #f5576c, #74130a);
+            border-radius: 2px;
+        }
 
-.themap img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+        .kakaskasen-maps-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            margin-top: 20px;
+        }
 
-.pinsnlines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  transition: opacity 0.3s ease; /* smooth effect */
-}
+        .kakaskasen-map-section {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
 
-.pinsnlines.hidden {
-    opacity: 0;
-    pointer-events: none; /* makes it unclickable when hidden */
-}
+        .kakaskasen-map-header {
+            background: linear-gradient(135deg, #5b1212, #8b2635);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-.pin {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: red;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
+        .kakaskasen-map-header__title {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
 
-.line {
-    position: absolute;
-    border-top: 3px solid red;
-}
+        .kakaskasen-map-header__subtitle {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .kakaskasen-google-map {
+            width: 100%;
+            height: 500px;
+            border: none;
+            display: block;
+        }
+
+        .kakaskasen-info-cards-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .kakaskasen-info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kakaskasen-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .kakaskasen-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .kakaskasen-card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #5b1212, #B22222);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3em;
+            margin-right: 15px;
+            box-shadow: 0 4px 15px rgba(91, 18, 18, 0.3);
+        }
+
+        .kakaskasen-card-title {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .kakaskasen-card-content {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .kakaskasen-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 8px 0;
+        }
+
+        .kakaskasen-info-item__icon {
+            color: #5b1212;
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .kakaskasen-coordinates {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #e9ecef;
+        }
+
+        .kakaskasen-section-divider {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .kakaskasen-section-divider:last-child {
+            border-bottom: none;
+            margin-bottom: 15px;
+        }
+
+        .kakaskasen-section-divider__title {
+            color: #5b1212;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .kakaskasen-section-divider__title-icon {
+            color: #B22222;
+        }
+
+        .kakaskasen-contact-buttons-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .kakaskasen-contact-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #5b1212, #B22222);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .kakaskasen-contact-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(91, 18, 18, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .kakaskasen-maps-container {
+                gap: 30px;
+            }
+            
+            .kakaskasen-maps-section__title {
+                font-size: 2.2em;
+            }
+            
+            .kakaskasen-info-card {
+                padding: 20px;
+            }
+            
+            .kakaskasen-card-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1em;
+            }
+            
+            .kakaskasen-card-title {
+                font-size: 1.1em;
+            }
+
+            .kakaskasen-card-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .kakaskasen-map-section {
+                width: 95%;
+            }
+            
+            .kakaskasen-info-cards-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .kakaskasen-card-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .kakaskasen-maps-section {
+                padding: 40px 15px;
+            }
+            
+            .kakaskasen-maps-section__title {
+                font-size: 1.8em;
+            }
+            
+            .kakaskasen-info-card {
+                padding: 15px;
+            }
+            
+            .kakaskasen-card-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .kakaskasen-card-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
 
 /* end map */
 
@@ -554,12 +774,27 @@ p {
 }
 
 .lembaga h1{
-    color: #5b1212;
-    font-size: 3em;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
+        font-size: 3rem;
+        font-weight: bold;
+        color: #74130a;
+        text-shadow: 3px 3px 6px rgba(116, 19, 10, 0.3);
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
 
+        .lembaga h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #f5576c, #74130a);
+            border-radius: 2px;
+        }
 .lembody{
     display: flex;
     width: 80%;
@@ -675,10 +910,27 @@ p {
 }
 
 .package h1{
-    color: white;
-    font-size: 3em;
     margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(255, 187, 181, 0.3);
+    position: relative;
+    display: inline-block;
     text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.package h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #f5576c, #ffffff);
+    border-radius: 2px;
 }
 
 .carousel-container {
@@ -1645,9 +1897,10 @@ p {
 .wrapper .icon svg {
   color: inherit;
   transition: color .18s ease;
-  height: 1.2em;
-  width: auto;
+  height: 1.5em;
+  width: 1.5em; /* Updated to match height */
   pointer-events: none;
+  fill: currentColor; /* Tambahkan ini untuk memastikan warna fill mengikuti color */
 }
 
 .wrapper .tooltip {
@@ -1691,7 +1944,10 @@ p {
 /* ===== Default brand colors (normal state) ===== */
 .wrapper .facebook svg   { color: #1877F2; } /* Facebook blue */
 .wrapper .instagram svg  { color: #E4405F; } /* Instagram */
-.wrapper .whatsapp svg   { color: #25D366; } /* WhatsApp green */
+.wrapper .whatsapp svg   { 
+  color: #25D366;
+  transform: scale(0.85); /* Slightly reduce size to match others */
+} /* WhatsApp green */
 .wrapper .email svg      { color: #EA4335; } /* Gmail red */
 
 /* ===== Hover states ===== */

@@ -618,7 +618,7 @@ document.querySelectorAll('.footer-column .icon').forEach(icon => {
         } else if (icon.classList.contains('instagram')) {
           tooltip.textContent = '@kampung.wisata.kakaskasen_dua';
         } else if (icon.classList.contains('whatsapp')) {
-          tooltip.textContent = '+62 85 3970 72088';
+          tooltip.textContent = '+62 853-9707-2088';
         } else if (icon.classList.contains('email')) {
           tooltip.textContent = 'pokdanwisvictory@gmail.com';
         }
@@ -631,16 +631,43 @@ document.querySelectorAll('.footer-column .icon').forEach(icon => {
 
 // maps
 // =====================================================================================================
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.querySelector(".mapbtn");
-  const pinsnlines = document.querySelector(".pinsnlines");
+// Add click animations to cards
+        document.querySelectorAll('.kakaskasen-info-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('kakaskasen-contact-button')) {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-5px)';
+                    }, 150);
+                }
+            });
+        });
 
-  // Default: pins and lines hidden
-  pinsnlines.classList.add("hidden");
+        // Contact button functionality
+        document.querySelectorAll('.kakaskasen-contact-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const cardTitle = this.closest('.kakaskasen-info-card').querySelector('.kakaskasen-card-title').textContent;
+                alert(`Anda akan menghubungi layanan: ${cardTitle}`);
+            });
+        });
 
-  toggleBtn.addEventListener("click", () => {
-    pinsnlines.classList.toggle("hidden");
-  });
-});
+        // Add entrance animation
+        function animateCards() {
+            const cards = document.querySelectorAll('.kakaskasen-info-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+        }
+
+        // Run animation when page loads
+        window.addEventListener('load', animateCards);
 // =====================================================================================================
 // end maps
