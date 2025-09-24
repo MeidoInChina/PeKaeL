@@ -363,8 +363,37 @@ p {
   animation: fadeIn 0.4s ease;
 }
 
+/* Gambar di dalam card (tetap fix, tidak responsif) */
+.card {
+  width: 200px;
+  height: 240px;
+  background: #000000;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  color: inherit;
+}
+
+.img {
+  flex: 1;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* gambar selalu terisi penuh kotak */
+  display: block;
+}
+
+/* Gambar di overlay (responsif) */
 #overlay-content img {
   width: 100%;
+  height: auto;       /* proporsional */
+  max-height: 60vh;   /* tidak lebih tinggi dari layar */
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -376,6 +405,35 @@ p {
   font-weight: bold;
   color: red;
   cursor: pointer;
+}
+#overlay-content {
+  background: rgb(255, 230, 180);
+  color: black;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;   /* ⬅️ tinggi maksimal 80% layar */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+  overflow-y: auto;   /* ⬅️ bisa discroll kalau isi kepanjangan */
+}
+
+/* Scroll bar biar lebih rapi */
+#overlay-content::-webkit-scrollbar {
+  width: 6px;
+}
+#overlay-content::-webkit-scrollbar-thumb {
+  background: #ff7777;
+  border-radius: 6px;
+}
+#overlay-content::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* ============== RESPONSIVE ============== */
