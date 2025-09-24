@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // =====================================================================================================
 // end package
 
-//Sponsor
+ //Sponsor
 // =====================================================================================================
 function loadLogos() {
             // Your logo file paths from the img folder
@@ -401,7 +401,7 @@ function loadLogos() {
 // =====================================================================================================
 // end sponsor
 
-// Penginapan
+// penginapan
 // =====================================================================================================
 class UniqueDualTourismPackageCarousel {
             constructor() {
@@ -522,13 +522,13 @@ class UniqueDualTourismPackageCarousel {
                     'adventure': {
                         title: "Charisma Bed and BreakFast",
                         type: "unique-dtp-adventure",
-                        intro: "Rasakan pengalaman petualangan tak terlupakan dengan berbagai pilihan aktivitas outdoor yang menantang. Dari hiking ke gunung berapi hingga berburu tikus ekor putih, setiap petualangan memberikan perspektif baru tentang keindahan alam dan budaya Minahasa.",
+                        intro: "Akomodasi ini merupakan tempat menginap berbiaya rendah (budget accommodation) di Tomohon. Tempat ini menawarkan akomodasi dengan taman, teras, dan dapur bersama. Terdapat beberapa hewan peliharaan di dalam rumah, termasuk anjing, bebek, dan anak kucing yang berkeliaran bebas.",
                         points: [
-                            "Minahasa Highland Tour: Jelajahi Gunung Lokon/Mahawu, kunjungi Extreme Market, dan nikmati keindahan air terjun serta danau-danau menawan",
-                            "Walking Tour Kakaskasen II: Berjalan santai mengelilingi desa dengan latar Gunung Lokon dan kunjungi Pagoda yang ikonik",
-                            "MEMERET (Berburu Tikus Ekor Putih): Pengalaman unik berburu malam hari menggunakan peralatan tradisional, dilengkapi cooking class",
-                            "Pemandian Air Panas Alami: Rilekskan tubuh dan pikiran di sumber air panas yang menyegarkan",
-                            "Spot Fotografi Menawan: Dapatkan foto-foto Instagram-worthy di berbagai lokasi indah sepanjang perjalanan"
+                            "Lokasi: Tomohon, Sulawesi Utara. Berada 24 km dari Pelabuhan Manado.",
+                            "Akses: Terletak di area perumahan, dekat dengan Gereja Pniel. Berjarak sekitar 24 km dari Pelabuhan Manado.",
+                            "Fasilitas: Wi-Fi gratis, parkir gratis, antar-jemput bandara (dengan biaya tambahan), dan dapur bersama.",
+                            "Sarapan: Tersedia sarapan prasmanan, kontinental, atau vegetarian.",
+                            "Lain-lain: Menyediakan sewa skuter, BBQ, dan dapat membantu mengatur tur atau kegiatan wisata"
                         ]
                     },
                     'culture': {
@@ -613,12 +613,12 @@ document.querySelectorAll('.footer-column .icon').forEach(icon => {
 
       tooltip.textContent = 'Copied!';
       setTimeout(() => {
-        if (icon.classList.contains('facebook')) {
-          tooltip.textContent = 'Facebook_account_unknown';
+        if (icon.classList.contains('youtube')) {
+          tooltip.textContent = '@kampungwisatakakaskasendua';
         } else if (icon.classList.contains('instagram')) {
           tooltip.textContent = '@kampung.wisata.kakaskasen_dua';
         } else if (icon.classList.contains('whatsapp')) {
-          tooltip.textContent = '+62 85 3970 72088';
+          tooltip.textContent = '+62 85 3970 72088';
         } else if (icon.classList.contains('email')) {
           tooltip.textContent = 'pokdanwisvictory@gmail.com';
         }
