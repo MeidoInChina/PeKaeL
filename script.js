@@ -534,13 +534,10 @@ class UniqueDualTourismPackageCarousel {
                     'culture': {
                         title: "Alina's Homestay",
                         type: "unique-dtp-culture",
-                        intro: "Temukan kedalaman budaya Minahasa melalui pengalaman interaktif yang menghubungkan Anda dengan tradisi, seni, dan kearifan lokal. Setiap aktivitas dirancang untuk memberikan pemahaman yang mendalam tentang nilai-nilai budaya yang telah diwariskan turun-temurun.",
+                        intro: "Homestay Alina merupakan akomodasi dengan fasilitas dasar yang memadai, seperti kamar mandi dalam, dapur umum, balkon dan ruang santai dengan view gunung lokon dan mahawu yang indah. Tersedia breakfast di tiap reservasi, parkiran yang nyaman bagi wisatawan.",
                         points: [
-                            "Tarian Perang Kabasaran: Saksikan dan pelajari tarian perang tradisional yang penuh makna filosofis dari instruktur berpengalaman",
-                            "Wisata Edukasi Budaya & Kreativitas: Belajar kolintang tradisional, membuat handycraft perca kain, dan cooking class masakan Minahasa",
-                            "Walking Tour Taman Kelong: Healing di tengah kebun bunga yang indah sambil mengenal budaya lokal lebih dalam",
-                            "Workshop Kerajinan Tradisional: Pelajari teknik pembuatan kerajinan bambu dan anyaman khas Minahasa",
-                            "Storytelling Budaya: Dengarkan cerita legendaris dan sejarah budaya Minahasa langsung dari tetua dan narasumber lokal"
+                            "Lokasi: Desa Wisata Kakaskasen Dua, Kota Tomohon, Sulawesi Utara",
+                            "Fasilitas: Kamar mandi pribadi, Sarapan pagi, Wifi Area, Perlengkapan Mandi, Area Selfie"
                         ]
                     }
                 };
