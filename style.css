@@ -5,6 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFEDD5;
+  color: white;
+}
+
 .oleo-script-regular {
   font-family: "Oleo Script", system-ui;
   font-weight: 400;
@@ -28,7 +35,7 @@ html{
 /* navbar specific */
 nav {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -195,7 +202,24 @@ h2 {
     font-style: italic;
     color: #ffffff;
 }
+
+@media screen and (max-width: 768px) {
+    .text h1 {
+        font-size: 3em;
+    }
+    .text p {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
 /* Explore */
+
+.exp{
+    width: 100vw;
+}
 
 .explore-btn {
     display: inline-block;
@@ -303,12 +327,6 @@ h2 {
 /* end explore*/
 
 /* halaman baru */
-body {
-  margin: 0;
-  background: #FFEDD5;
-  color: white;
-}
-
 h2 {
   margin: 50px;
   text-transform: uppercase;
@@ -836,27 +854,28 @@ p {
 }
 
 .lembaga h1{
-        font-size: 3rem;
-        font-weight: bold;
-        color: #74130a;
-        text-shadow: 3px 3px 6px rgba(116, 19, 10, 0.3);
-        position: relative;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
+    font-size: 3rem;
+    font-weight: bold;
+    color: #74130a;
+    text-shadow: 3px 3px 6px rgba(116, 19, 10, 0.3);
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
 
-        .lembaga h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #f5576c, #74130a);
-            border-radius: 2px;
-        }
+.lembaga h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #f5576c, #74130a);
+    border-radius: 2px;
+}
+
 .lembody{
     display: flex;
     width: 80%;
@@ -903,6 +922,17 @@ p {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .lembaga h1 {
+        font-size: 2.2rem;
+    }
+
+    .lemtitle{
+        font-size: 1.1em;
+        padding: 15px 25px;
+    }
 }
 
 .leminmaps{
@@ -1384,9 +1414,6 @@ p {
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
     
     .carousel-container {
         padding: 0 25px;
