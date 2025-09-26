@@ -17,7 +17,13 @@
             <img src="img/logoKK2.png" alt="Logo">
             <span>Desa Wisata Kakaskasen II</span>
         </div>
-        <ul class="nav-links">
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
             <li><a href="#">Beranda</a></li>
             <li><a href="#">Map</a></li>
             <li><a href="#">Lembaga</a></li>
@@ -26,6 +32,14 @@
             <li><a href="#">Kontak</a></li>
         </ul>
     </nav>
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    </script>
     <!-- end nav -->
 
     <!-- explore more -->
