@@ -17,15 +17,31 @@
             <img src="img/logoKK2.png" alt="Logo">
             <span>Desa Wisata Kakaskasen II</span>
         </div>
-        <ul class="nav-links">
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <ul class="nav-links" id="navLinks">
             <li><a href="#">Beranda</a></li>
-            <li><a href="#">Map</a></li>
-            <li><a href="#">Lembaga</a></li>
-            <li><a href="#">Paket</a></li>
-            <li><a href="#">Homestay</a></li>
-            <li><a href="#">Kontak</a></li>
+            <li><a href="#intro">Tentang</a></li>
+            <li><a href="#map">Peta</a></li>
+            <li><a href="#lembaga">Lembaga</a></li>
+            <li><a href="#paket">Paket</a></li>
+            <li><a href="#homestay">Homestay</a></li>
+            <li><a href="https://wa.me/6285397072088" target="_blank">Kontak</a></li>
         </ul>
+        <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        </script>
     </nav>
+    
     <!-- end nav -->
 
     <!-- explore more -->
@@ -34,26 +50,27 @@
             <div class="text">
                 <h1 class="">Desa Wisata Kakaskasen II</h1>
                 <p>Authencity Under The Volcano</p>
-                <a href="#" class="explore-btn">Explore More</a>
+                <a href="#intro" class="explore-btn">Explore More</a>
             </div>
             <div class="exp-img">
                 <div class="exp-imgs" style="background-image: url('img/kolintang.jpg');"></div>
                 <div class="exp-imgs" style="background-image: url('img/landscape1.png');"></div>
                 <div class="exp-imgs" style="background-image: url('img/mountain3.png');"></div>
-                <div class="exp-imgs" style="background-image: url('img/mountain5.png');"></div>
+                <div class="exp-imgs" style="background-image: url('img/dance4.jpg');"></div>
                 <div class="exp-imgs" style="background-image: url('img/mountain6.png');"></div>
             </div>
         </div>
 
         <!-- AMENITY -->
+         <div id="intro"></div>
         <div class="section">
             <h1>AMENITY</h1>
-            <div class="grid amenity">
-            <div class="card" data-img="img/Bukit doa.jpg" data-desc="Terletak di kaki Gunung Mahawu, Bukit Doa adalah tempat wisata religi yang menjadi salah satu daya tarik utama di Kelurahan Kakaskasen II. Tempat ini sering dikunjungi untuk kegiatan ziarah dan retret, dengan fasilitas seperti Chapel of Mother Mary, Amphitheater, Gua Bunda Maria, dan replika Makam Yesus. Selain sebagai tempat ibadah, Bukit Doa juga menyediakan area untuk kegiatan outbound dan berkemah, menjadikannya pilihan ideal untuk wisata religi dan alam.">
+            <div class="grid amenity"> 
+            <div class="card" data-img="img/Bukit doa.jpg " data-desc=" Terletak di kaki Gunung Mahawu, Bukit Doa adalah tempat wisata religi yang menjadi salah satu daya tarik utama di Kelurahan Kakaskasen II. Tempat ini sering dikunjungi untuk kegiatan ziarah dan retret, dengan fasilitas seperti Chapel of Mother Mary, Amphitheater, Gua Bunda Maria, dan replika Makam Yesus. Selain sebagai tempat ibadah, Bukit Doa juga menyediakan area untuk kegiatan outbound dan berkemah, menjadikannya pilihan ideal untuk wisata religi dan alam. `foto: © 2022 All Rights Reserved. Site by WEBARQ`">
                 <div class="img"><img src="img/Bukit doa.jpg" alt=""></div>
                 <div class="desc">Bukit Doa</div>
             </div>
-            <div class="card" data-img="img/taman kelong.jpg" data-desc="Taman Kelong, yang juga dikenal sebagai Danau Kasawean, adalah destinasi wisata alam yang terletak di kaki Gunung Mahawu. Tempat ini menawarkan pemandangan danau dan pegunungan yang indah, menjadikannya lokasi yang ideal untuk bersantai atau mengadakan acara. Dengan adanya fasilitas seperti kafe dan restoran dengan area indoor dan outdoor, Taman Kelong juga sering disewakan untuk berbagai acara pribadi seperti pesta taman, pernikahan, atau ulang tahun.">
+            <div class="card" data-img="img/taman kelong.jpg" data-desc="Taman Kelong, yang juga dikenal sebagai Danau Kasawean, adalah destinasi wisata alam yang terletak di kaki Gunung Mahawu. Tempat ini menawarkan pemandangan danau dan pegunungan yang indah, menjadikannya lokasi yang ideal untuk bersantai atau mengadakan acara. Dengan adanya fasilitas seperti kafe dan restoran dengan area indoor dan outdoor, Taman Kelong juga sering disewakan untuk berbagai acara pribadi seperti pesta taman, pernikahan, atau ulang tahun. `foto: Copyright © 2025 Wonderful Manado`">
                 <div class="img"><img src="img/taman kelong.jpg" alt=""></div>
                 <div class="desc">Taman Kelong</div>
             </div>
@@ -117,8 +134,13 @@
         <div class="section">
             <h1>YEARLY EVENT</h1>
             <div class="grid event">
-            <div class="card" data-img="img/TIFF2.png" data-desc="Tomohon International Flower Festival (TIFF) adalah festival bunga dan seni budaya berskala internasional yang diadakan setiap tahun oleh Pemerintah Kota Tomohon. Festival ini menampilkan serangkaian acara, termasuk Tournament of Flowers, yaitu parade kendaraan hias bunga yang diikuti oleh perwakilan dari berbagai negara dan perusahaan. Selain itu, ada juga kontes Ratu Bunga, pameran florikultura, dan pergelaran seni-budaya, yang bertujuan untuk mempromosikan Tomohon sebagai 'Kota Bunga' dan meningkatkan ekonomi lokal.">
+<<<<<<< HEAD
+            <div class="card" data-img="img/tif.jpg" data-desc="Tomohon International Flower Festival (TIFF) adalah festival bunga dan seni budaya berskala internasional yang diadakan setiap tahun oleh Pemerintah Kota Tomohon. Festival ini menampilkan serangkaian acara, termasuk Tournament of Flowers, yaitu parade kendaraan hias bunga yang diikuti oleh perwakilan dari berbagai negara dan perusahaan. Selain itu, ada juga kontes Ratu Bunga, pameran florikultura, dan pergelaran seni-budaya, yang bertujuan untuk mempromosikan Tomohon sebagai 'Kota Bunga' dan meningkatkan ekonomi lokal.">
+                <div class="img"><img src="img/tif.jpg" alt=""></div>
+=======
+            <div class="card" data-img="img/TIFF3.png" data-desc="Tomohon International Flower Festival (TIFF) adalah festival bunga dan seni budaya berskala internasional yang diadakan setiap tahun oleh Pemerintah Kota Tomohon. Festival ini menampilkan serangkaian acara, termasuk Tournament of Flowers, yaitu parade kendaraan hias bunga yang diikuti oleh perwakilan dari berbagai negara dan perusahaan. Selain itu, ada juga kontes Ratu Bunga, pameran florikultura, dan pergelaran seni-budaya, yang bertujuan untuk mempromosikan Tomohon sebagai 'Kota Bunga' dan meningkatkan ekonomi lokal.">
                 <div class="img"><img src="img/TIFF1.png" alt=""></div>
+>>>>>>> 06f2243da57bdc889dd621991bff734f4a23aa9a
                 <div class="desc">TIFF</div>
             </div>
             </div>
@@ -136,7 +158,7 @@
     <!-- end explore -->
 
     <!-- maps -->
-    <div class="kakaskasen-maps-section">
+    <div id="map" class="kakaskasen-maps-section">
         <h1 class="kakaskasen-maps-section__title">Peta & Informasi Wisata</h1>
         
         <!-- Google Maps Section -->
@@ -234,7 +256,7 @@
     <!-- end maps -->
 
     <!-- lembaga -->
-    <div class="lembaga">
+    <div id="lembaga" class="lembaga">
         <h1>Kelembagaan & Pelayanan</h1>
         <div class="lembody">
             <!-- left -->
@@ -295,6 +317,43 @@
                             <path d="M0,0 L0,6 L9,3 z" fill="#000" />
                         </marker>
                         </defs>
+
+                        <!-- mobile svg -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                            function updateArrowX1() {
+                            const isMobile = window.innerWidth <= 768;
+                            const arrows = document.querySelector('.leminmaps .arrows');
+                            
+                            if (arrows) {
+                                const lines = arrows.querySelectorAll('line');
+                                
+                                // Logic for lines[4] and lines[5]
+                                if (lines[4]) {
+                                    lines[4].setAttribute('x1', isMobile ? '75%' : '65%');
+                                    // Corrected y1 to 52 (unitless number, not percentage) for desktop, matching your original request
+                                    lines[4].setAttribute('y1', isMobile ? '55%' : '310'); 
+                                }
+                                if (lines[5]) {
+                                    lines[5].setAttribute('x1', isMobile ? '75%' : '65%');
+                                    lines[5].setAttribute('y1', isMobile ? '55%' : '310');
+                                }
+                                
+                                // FIX: The for loop is now inside the 'if (arrows)' block, 
+                                // where the 'lines' variable is properly defined and accessible.
+                                for (let i = 0; i < 4; i++) {
+                                    if (lines[i]) {
+                                        // Logic for lines 0, 1, 2, 3
+                                        lines[i].setAttribute('y1', isMobile ? '15%' : lines[i].getAttribute('y1'));
+                                    }
+                                }
+                            }
+                            }
+                            
+                            updateArrowX1();
+                            window.addEventListener('resize', updateArrowX1);
+                            }); 
+                        </script>
                     </svg>
                 </div>
             </div>
@@ -303,7 +362,7 @@
     <!-- end lembaga -->
 
     <!-- package -->
-    <div class="package">
+    <div id="paket" class="package">
         <h1>Paket Wisata</h1>
         <div class="carousel-container">
             <div class="carousel">
@@ -395,7 +454,7 @@
     <!-- end package -->
 
     <!-- penginapan -->
-    <div class="main-title-container">
+    <div id="homestay" class="main-title-container">
         <h1 class="main-title">Homestay</h1>
     </div>
 

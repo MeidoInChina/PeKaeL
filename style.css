@@ -5,6 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFEDD5;
+  color: white;
+}
+
 .oleo-script-regular {
   font-family: "Oleo Script", system-ui;
   font-weight: 400;
@@ -19,82 +26,128 @@
 
 html{
     background-color: #100b0b;
-}
-
-::-webkit-scrollbar{
-    width: 0;
+    overflow-x: hidden;
 }
 
 /* navbar specific */
 nav {
+<<<<<<< HEAD
     position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /* smooth, GPU-accelerated animation */
+    transition: transform 0.5s cubic-bezier(.2,.9,.2,1), box-shadow 0.28s ease, opacity 0.22s ease;
+    will-change: transform;
+    transform: translateY(0);
+
     padding: 20px 50px;
     background: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
     z-index: 1000;
+=======
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
+  z-index: 1000;
+>>>>>>> 06f2243da57bdc889dd621991bff734f4a23aa9a
 }
 
 nav .logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 nav .logo img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
   border-top: rgb(183, 0, 0) 2px solid;
   border-bottom: rgb(183, 0, 0) 2px solid;
   border-radius: 100%;
 }
 
 nav .logo span {
-    color: white;
-    font-size: 1.2em;
-    font-weight: 500;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 .nav-links {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links li {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 400;
-    transition: 0.3s;
-    position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 400;
+  transition: 0.3s;
+  position: relative;
 }
 
 .nav-links li a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scale(0);
-    height: 2px;
-    bottom: 0;
-    background: #B22222;
-    left: 0;
-    transition: transform 0.3s ease-out;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scale(0);
+  height: 2px;
+  bottom: 0;
+  background: #B22222;
+  left: 0;
+  transition: transform 0.3s ease-out;
 }
 
 .nav-links li a:hover {
-    color: #B22222;
-    cursor: pointer;
+  color: #B22222;
+  cursor: pointer;
 }
 
-.nav-links li a:hover::after{
-    transform: scale(1);
-    transform-origin: bottom-left;
+.nav-links li a:hover::after {
+  transform: scale(1);
+  transform-origin: bottom-left;
+}
+
+/* Hamburger (hidden by default on desktop) */
+.hamburger {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 20px;
+    gap: 20px;
+    display: none; /* hidden by default */
+  }
+
+  .nav-links.active {
+    display: flex; /* show when active */
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 /* Explore Section */
@@ -163,7 +216,24 @@ h2 {
     font-style: italic;
     color: #ffffff;
 }
+
+@media screen and (max-width: 768px) {
+    .text h1 {
+        font-size: 3em;
+    }
+    .text p {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
 /* Explore */
+
+.exp{
+    width: 100vw;
+}
 
 .explore-btn {
     display: inline-block;
@@ -271,12 +341,6 @@ h2 {
 /* end explore*/
 
 /* halaman baru */
-body {
-  margin: 0;
-  background: #FFEDD5;
-  color: white;
-}
-
 h2 {
   margin: 50px;
   text-transform: uppercase;
@@ -804,27 +868,28 @@ p {
 }
 
 .lembaga h1{
-        font-size: 3rem;
-        font-weight: bold;
-        color: #74130a;
-        text-shadow: 3px 3px 6px rgba(116, 19, 10, 0.3);
-        position: relative;
-        display: inline-block;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
+    font-size: 3rem;
+    font-weight: bold;
+    color: #74130a;
+    text-shadow: 3px 3px 6px rgba(116, 19, 10, 0.3);
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
 
-        .lembaga h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #f5576c, #74130a);
-            border-radius: 2px;
-        }
+.lembaga h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #f5576c, #74130a);
+    border-radius: 2px;
+}
+
 .lembody{
     display: flex;
     width: 80%;
@@ -863,7 +928,7 @@ p {
 }
 
 .lemdesc p{
-    font-size: 1.1em;
+    font-size: 1em;
     color: #eeeeee;
     text-align: justify;
     line-height: 1.6;
@@ -873,22 +938,20 @@ p {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+    .lembaga h1 {
+        font-size: 2.2rem;
+    }
+
+    .lemtitle{
+        font-size: 1.1em;
+        padding: 15px 25px;
+    }
+}
+
 .leminmaps{
     width: 100%;
     height: 600px;
-}
-
-.lembisnis li, .lempersewaan li{
-    list-style: none;
-    margin: 8px 0;
-    width: fit-content;
-    text-align: left;
-    font-size: 1.1em;
-    color: #eeeeee;
-    background-color: #c36262;
-    padding: 10px 15px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .leminmaps {
@@ -897,7 +960,8 @@ p {
     height: 600px;
 }
 
-    .node {
+.node {
+    font-size: 0.9em;
     position: absolute;
     background-color: #c36262;
     color: #eee;
@@ -906,6 +970,8 @@ p {
     font-weight: bold;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
+
 
 /* Positioning nodes to match diagram */
 .center { top: 5%; left: 50%; transform: translateX(-50%); }
@@ -929,6 +995,32 @@ p {
     stroke-width: 2;
 }
 
+@media (max-width: 768px) {
+    .lembody {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lembgs, .lemtext {
+        max-width: 90%;
+    }
+
+    .leminmaps {
+        height: 400px;
+    }
+
+    .center { top: 5%; left: 50%; transform: translateX(-50%); }
+    .left-top { top: 25%; left: -10%; }
+    .left-mid { top: 45%; left: 0%; }
+    .right-top { top: 25%; right: -10%; }
+    .bottom-mid { top: 45%; left: 75%; transform: translateX(-50%); }
+    .bottom-left { top: 80%; left: 15%; }
+    .bottom-right { top: 80%; right: -10%; }
+
+    .leminmaps .arrows line:nth-of-type(5), .leminmaps .arrows line:nth-of-type(6) {
+        x1: 75%;
+    }
+}
 
 /* end lembaga */
 
@@ -1362,9 +1454,6 @@ p {
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
     
     .carousel-container {
         padding: 0 25px;
@@ -2085,7 +2174,7 @@ p {
 /* sponsor */
 .ticker-wrapper {
             width: 100%;
-            background-color: #000;
+            background-color: #ffffff;
             overflow: hidden;
             position: relative;
             height: 80px;
