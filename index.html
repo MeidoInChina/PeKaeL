@@ -310,6 +310,43 @@
                             <path d="M0,0 L0,6 L9,3 z" fill="#000" />
                         </marker>
                         </defs>
+
+                        <!-- mobile svg -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                            function updateArrowX1() {
+                            const isMobile = window.innerWidth <= 768;
+                            const arrows = document.querySelector('.leminmaps .arrows');
+                            
+                            if (arrows) {
+                                const lines = arrows.querySelectorAll('line');
+                                
+                                // Logic for lines[4] and lines[5]
+                                if (lines[4]) {
+                                    lines[4].setAttribute('x1', isMobile ? '75%' : '65%');
+                                    // Corrected y1 to 52 (unitless number, not percentage) for desktop, matching your original request
+                                    lines[4].setAttribute('y1', isMobile ? '55%' : '310'); 
+                                }
+                                if (lines[5]) {
+                                    lines[5].setAttribute('x1', isMobile ? '75%' : '65%');
+                                    lines[5].setAttribute('y1', isMobile ? '55%' : '310');
+                                }
+                                
+                                // FIX: The for loop is now inside the 'if (arrows)' block, 
+                                // where the 'lines' variable is properly defined and accessible.
+                                for (let i = 0; i < 4; i++) {
+                                    if (lines[i]) {
+                                        // Logic for lines 0, 1, 2, 3
+                                        lines[i].setAttribute('y1', isMobile ? '15%' : lines[i].getAttribute('y1'));
+                                    }
+                                }
+                            }
+                            }
+                            
+                            updateArrowX1();
+                            window.addEventListener('resize', updateArrowX1);
+                            }); 
+                        </script>
                     </svg>
                 </div>
             </div>

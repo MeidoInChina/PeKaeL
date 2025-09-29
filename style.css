@@ -981,6 +981,32 @@ p {
     stroke-width: 2;
 }
 
+@media (max-width: 768px) {
+    .lembody {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lembgs, .lemtext {
+        max-width: 90%;
+    }
+
+    .leminmaps {
+        height: 400px;
+    }
+
+    .center { top: 5%; left: 50%; transform: translateX(-50%); }
+    .left-top { top: 25%; left: -10%; }
+    .left-mid { top: 45%; left: 0%; }
+    .right-top { top: 25%; right: -10%; }
+    .bottom-mid { top: 45%; left: 75%; transform: translateX(-50%); }
+    .bottom-left { top: 80%; left: 15%; }
+    .bottom-right { top: 80%; right: -10%; }
+
+    .leminmaps .arrows line:nth-of-type(5), .leminmaps .arrows line:nth-of-type(6) {
+        x1: 75%;
+    }
+}
 
 /* end lembaga */
 
