@@ -31,8 +31,7 @@ html{
 
 /* navbar specific */
 nav {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     position: fixed;
     width: 100%;
     display: flex;
@@ -45,23 +44,18 @@ nav {
     transform: translateY(0);
 
     padding: 20px 50px;
-    background: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
     z-index: 1000;
-=======
-=======
->>>>>>> 06f2243da57bdc889dd621991bff734f4a23aa9a
+
   position: fixed;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 50px;
-  background: linear-gradient(to bottom, rgba(0,0,0,1), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
   z-index: 1000;
-<<<<<<< HEAD
->>>>>>> 06f2243da57bdc889dd621991bff734f4a23aa9a
-=======
->>>>>>> 06f2243da57bdc889dd621991bff734f4a23aa9a
+
 }
 
 nav .logo {

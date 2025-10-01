@@ -11,10 +11,10 @@ window.addEventListener('scroll', function() {
     } else {
         // Scrolling up
         nav.style.transform = 'translateY(0)';
-        if (currentScrollTop > 50) {
-            nav.style.background = '#000000';
+        if (currentScrollTop > 60) {
+            nav.style.background = '#00000093';
         } else {
-            nav.style.background = 'linear-gradient(#000000 50%, #00000000)';
+            nav.style.background = 'linear-gradient(#000000 60%, rgba(0, 0, 0, 0.52))';
         }
     }
     lastScrollTop = currentScrollTop;
