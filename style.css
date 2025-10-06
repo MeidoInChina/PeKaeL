@@ -147,7 +147,7 @@ nav .logo span {
 .explore {
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden;   
     background: linear-gradient(#00000080, #0000008f), url(img/mountain6.png);
     background-position: center;
     background-size: cover;
