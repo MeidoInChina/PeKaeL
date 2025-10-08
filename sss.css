@@ -784,8 +784,6 @@ p {
 }
 
 @media (max-width: 768px) {
-    .wrapper
-
     .kakaskasen-maps-container {
         gap: 30px;
     }
@@ -1965,6 +1963,8 @@ p {
 .footer-column ul li i {
     margin-right: 10px;
 }
+
+
 
 .wrapper {
   display: inline-flex;
