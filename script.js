@@ -119,7 +119,7 @@ overlay.addEventListener('click', e => {
 class Carousel {
     constructor() {
         this.currentSlide = 0;
-        this.totalSlides = 6;
+        this.totalSlides = document.querySelectorAll('.carousel-slide').length;
         this.slidesToShow = 3;
         this.slidesToScroll = 1;
         this.viewport = document.getElementById('carouselViewport');
@@ -224,6 +224,12 @@ class Carousel {
                 const cardId = card.getAttribute('data-card');
                 this.showPackageDetails(cardId);
             });
+            const tapHere = card.querySelector('.tap-here');
+tapHere.addEventListener('click', (e) => {
+    e.stopPropagation(); // hindari trigger klik parent
+    const cardId = card.getAttribute('data-card');
+    this.showPackageDetails(cardId);
+});
         });
     }
     
@@ -298,6 +304,20 @@ class Carousel {
                     "Belajar Kolintang Tradisional: Kenali alat musik kebanggaan Minahasa dan pelajari cara memainkannya langsung dari pengrajin serta pemain kolintang lokal.",
                     "Kreasi Handycraft Perca Kain: Kembangkan imajinasi Anda dengan merangkai kain perca menjadi karya unik seperti tas, hiasan, hingga aksesori bernilai seni tinggi yang ramah lingkungan dan sarat makna.",
                     "Cooking Class Masakan Minahasa: Masak langsung kuliner khas Minahasa seperti rica-rica, sambal dabudabu, hingga kue tradisional bersama ibu-ibu lokal."
+                ]
+            },
+            7: {
+                title: "Treking Mahawu",
+                subtitle: "Nikmati kesejukan dan keindahan alam pedesaan",
+                image: "card-7",
+                intro: "Gunung Mahawu Menawarkan pengalaman luar biasa dengan perjalanan melewati perkebunan subur yang dikelola oleh petani lokal yang ramah. Di sepanjang jalur, kita bisa berinteraksi dengan mereka yang sibuk merawat tanaman Bunga dan sayuran, memberi kita wawasan tentang kehidupan sehari-hari di kaki gunung. Setiap langkah menuju puncak Mahawu membawa kita semakin dekat dengan keindahan alam yang menakjubkan: kawah gunung yang masih aktif, udara segar, dan panorama yang memukau. Dari puncak, kita disuguhkan pemandangan spektakuler Gunung Lokon yang menjulang tinggi serta Kota Tomohon yang tampak tenang di bawahnya, menjadikan treking ini bukan hanya perjalanan fisik, tetapi juga sebuah pengalaman visual dan spiritual yang tak terlupakan.",
+                points: [
+                    "1/PAX = Rp.775.000 || 6/PAX = Rp.355.000",
+                    "2/PAX = Rp.550.000 || 7/PAX = Rp.300.000",
+                    "3/PAX = Rp.450.000 || 8/PAX = Rp.275.000",
+                    "4/PAX = Rp.375.000 || 9/PAX = Rp.250.000",
+                    "5/PAX = Rp.350.000 ||10/PAX = Rp.235.000"
+                    
                 ]
             }
         };
