@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+::-webkit-scrollbar{
+    width: 0;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -853,7 +857,6 @@ p {
 
 .lembaga{
     width: 100vw;
-    padding-left: 60px;
     padding-top: 60px;
     text-align: center;
 }
@@ -956,6 +959,7 @@ p {
     border-radius: 20px;
     font-weight: bold;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 11;
 }
 
 
