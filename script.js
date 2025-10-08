@@ -329,19 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookButton = document.getElementById('bookButton');
     
     // Add event listeners for social icons
-    const whatsappIcon = document.querySelector('.social-icon.whatsapp');
-    const emailIcon = document.querySelector('.social-icon.email');
-    
-    whatsappIcon.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('Anda akan diarahkan ke WhatsApp untuk menghubungi kami.');
-    });
-    
-    emailIcon.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('Anda akan diarahkan untuk mengirim email kepada kami.');
-    });
-    
     closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
