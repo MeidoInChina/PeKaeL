@@ -947,7 +947,6 @@ p {
     position: relative;
     width: 100%;
     height: 600px;
-    overflow: hidden;
 }
 
 .node {
@@ -993,7 +992,7 @@ p {
     }
 
     .lembgs, .lemtext {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .leminmaps {
