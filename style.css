@@ -576,7 +576,7 @@ p {
 
 /* end about */
 
-/* map */
+/* maps */
 
 .kakaskasen-maps-section {
     width: 100%;
@@ -687,17 +687,21 @@ p {
 }
 
 .kakaskasen-card-icon {
-    width: 50px;
-    height: 50px;
+    flex-shrink: 0; /* biar tidak mengecil saat layar kecil */
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
     background: linear-gradient(135deg, #5b1212, #B22222);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-right: 15px;
     box-shadow: 0 4px 15px rgba(91, 18, 18, 0.3);
+    aspect-ratio: 1 / 1; /* memastikan tetap lingkaran sempurna di semua ukuran */
 }
 
 .kakaskasen-card-title {
@@ -713,15 +717,34 @@ p {
 
 .kakaskasen-info-item {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 8px 0;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
 }
 
 .kakaskasen-info-item__icon {
-    color: #5b1212;
-    width: 20px;
-    margin-right: 10px;
+    color: #5b1212; /* warna merah gelap sama dengan card lain */
+    font-size: 10px; /* ukuran kecil sesuai contoh */
+    margin-top: 6px; /* biar sejajar dengan teks */
+    flex-shrink: 0; /* jangan berubah ukuran */
+}
+
+.kakaskasen-info-item span {
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.kakaskasen-info-row {
+  display: flex;
+  align-items: flex-start; /* sejajarkan titik dengan teks */
+  gap: 8px; /* jarak antara titik dan teks */
+}
+
+.kakaskasen-info-row span {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .kakaskasen-coordinates {
@@ -843,8 +866,11 @@ p {
     }
     
     .kakaskasen-card-header {
-        flex-direction: column;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px; /* memberi jarak aman */
+        flex-wrap: wrap;
     }
     
     .kakaskasen-card-icon {
