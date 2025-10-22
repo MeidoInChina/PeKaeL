@@ -543,7 +543,7 @@ class UniqueDualTourismPackageCarousel {
                 // Package data based on carousel type (only 2 types now)
                 const packages = {
                     'adventure': {
-                        title: "Charisma Bed and BreakFast",
+                        title: "Chrisma Bed and BreakFast",
                         type: "unique-dtp-adventure",
                         intro: "Akomodasi ini merupakan tempat menginap berbiaya rendah (budget accommodation) di Tomohon. Tempat ini menawarkan akomodasi dengan taman, teras, dan dapur bersama. Terdapat beberapa hewan peliharaan di dalam rumah, termasuk anjing, bebek, dan anak kucing yang berkeliaran bebas.",
                         points: [
@@ -638,7 +638,7 @@ document.querySelectorAll('.footer-column .icon').forEach(icon => {
         } else if (icon.classList.contains('instagram')) {
           tooltip.textContent = '@kampung.wisata.kakaskasen_dua';
         } else if (icon.classList.contains('whatsapp')) {
-          tooltip.textContent = '+62 853-9707-2088';
+          tooltip.textContent = '+62 85397072055';
         } else if (icon.classList.contains('email')) {
           tooltip.textContent = 'pokdanwisvictory@gmail.com';
         }
